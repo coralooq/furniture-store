@@ -1,0 +1,1139 @@
+.header-sale {
+  background: #3A5041;
+  width: 1920px;
+  height: 71px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.header-sale p {
+  padding-top: 21px;
+  padding-left: 553px;
+  color: #FFFFFF;
+}
+
+.nav-header {
+  position: relative;
+  width: 1920px;
+  height: 139px;
+}
+
+.nav_left {
+  position: absolute;
+  top: 55px;
+  left: 101px;
+  width: 600px;
+  height: 33px;
+}
+
+.nav_left a, .nav_right a {
+  padding-right: 38px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: left;
+  color: #BEBFBE;
+  text-decoration: none;
+}
+
+.nav_left a:hover, .nav_right a:hover {
+  cursor: pointer;
+  color: #969696;
+}
+
+.title {
+  position: absolute;
+  top: 29px;
+  left: 770px;
+}
+
+.nav_right {
+  position: absolute;
+  top: 55px;
+  left: 1227px;
+  width: 515px;
+  height: 33px;
+  color: #BEBFBE;
+}
+
+button {
+  border: none;
+  background: white;
+}
+
+.cart {
+  position: absolute;
+  top: 45px;
+  left: 1725px;
+  width: 40px;
+  height: 40px;
+}
+.cart:hover {
+  background: #efeded;
+  transition: 0.2s;
+}
+
+.search {
+  position: absolute;
+  top: 45px;
+  left: 1792px;
+  width: 40px;
+  height: 40px;
+}
+.search:hover {
+  background: #efeded;
+  transition: 0.2s;
+}
+
+.shop-collection {
+  position: relative;
+  width: 1903px;
+  height: 1075px;
+}
+
+.shop-collection-img {
+  width: 1903px;
+  height: 1075px;
+  filter: brightness(70%);
+}
+
+.shop-collection-text {
+  position: absolute;
+  top: 430px;
+  left: 118px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 42px;
+  text-align: left;
+  width: 825px;
+  height: 84px;
+  z-index: 33;
+  color: #FFFFFF;
+}
+
+.shop-collection-button {
+  position: absolute;
+  top: 600px;
+  left: 121px;
+  width: 442px;
+  height: 96px;
+  z-index: 33;
+  color: #FFFFFF;
+  background: #B58269;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-collection-button:hover {
+  cursor: pointer;
+  background: #87614f;
+  transition: 0.3s;
+}
+
+.main-text {
+  position: absolute;
+  top: 220px;
+  left: 118px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 94.5px;
+  text-align: left;
+  width: 1099px;
+  height: 190px;
+  z-index: 33;
+  color: #FFFFFF;
+}
+
+.collections {
+  width: 1719px;
+  height: 1134px;
+}
+.collections__first-row-cell-first {
+  position: absolute;
+  top: 1377px;
+  left: 101px;
+  width: 1137px;
+  height: 555px;
+}
+.collections__first-row-cell-first img {
+  object-fit: cover;
+  width: 1137px;
+  height: 555px;
+}
+.collections__first-row-cell-first p {
+  position: absolute;
+  top: 459px;
+  display: block;
+  width: 1137px;
+  height: 96px;
+  background-color: #636A6A;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collections__first-row-cell-second {
+  position: absolute;
+  top: 1377px;
+  left: 1264px;
+  width: 555px;
+  height: 555px;
+}
+.collections__first-row-cell-second img {
+  object-fit: cover;
+  width: 555px;
+  height: 555px;
+}
+.collections__first-row-cell-second p {
+  position: absolute;
+  top: 459px;
+  display: block;
+  width: 555px;
+  height: 96px;
+  background-color: #636A6A;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collections__second-row-cell-first, .collections__second-row-cell-second, .collections__second-row-cell-three {
+  width: 555px;
+  height: 555px;
+}
+.collections__second-row-cell-first {
+  position: absolute;
+  top: 1956px;
+  left: 101px;
+}
+.collections__second-row-cell-second {
+  position: absolute;
+  top: 1956px;
+  left: 683px;
+}
+.collections__second-row-cell-three {
+  position: absolute;
+  top: 1956px;
+  left: 1264px;
+}
+.collections__second-row-cell-first img, .collections__second-row-cell-second img, .collections__second-row-cell-three img {
+  object-fit: cover;
+  width: 555px;
+  height: 555px;
+}
+.collections__second-row-cell-first p, .collections__second-row-cell-second p, .collections__second-row-cell-three p {
+  position: absolute;
+  top: 459px;
+  display: block;
+  width: 555px;
+  height: 96px;
+  background-color: #636A6A;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  background: rgb(0, 0, 0);
+  opacity: 1;
+}
+.wrap:hover {
+  opacity: 0.97;
+  transition: 0.3s;
+}
+.wrap:hover p {
+  background: rgba(255, 255, 255, 0.5);
+  color: #636A6A;
+  transition: 0.3s;
+}
+
+.about-us {
+  position: absolute;
+  top: 2611px;
+  left: 101px;
+  width: 1718px;
+  height: 399px;
+}
+
+.catalog {
+  position: absolute;
+  top: 3028px;
+  width: 1720px;
+  height: 733px;
+}
+.catalog h5 {
+  position: absolute;
+  top: 85px;
+  left: 760px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 94.5px;
+  text-align: left;
+}
+.catalog__description {
+  position: absolute;
+  top: 200px;
+  left: 480px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.catalog__list {
+  position: absolute;
+  top: 150px;
+  left: 85px;
+  width: 1558px;
+  height: 518px;
+}
+.catalog__list__first {
+  position: absolute;
+  top: 173px;
+  left: 81px;
+  width: 362px;
+  height: 517px;
+}
+.catalog__list__first img {
+  position: absolute;
+  width: 269px;
+  height: 269px;
+  top: 61px;
+  left: 41px;
+  gap: 0px;
+  opacity: 0px;
+}
+.catalog__list__first .item-name {
+  position: absolute;
+  top: 353px;
+  width: 324px;
+  height: 32px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25.1px;
+  font-weight: 400;
+  line-height: 31.63px;
+  text-align: left;
+}
+.catalog__list__first .price {
+  position: absolute;
+  top: 396px;
+  width: 96px;
+  height: 33px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.catalog__list__first a {
+  position: absolute;
+  width: 361px;
+  height: 74px;
+  top: 443px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B58269;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.catalog__list__first a:hover {
+  cursor: pointer;
+  background: #c38b6f;
+}
+.catalog__list__second {
+  position: absolute;
+  top: 173px;
+  left: 496px;
+  width: 362px;
+  height: 517px;
+}
+.catalog__list__second img {
+  position: absolute;
+  width: 311px;
+  height: 261px;
+  top: 81px;
+  left: 26px;
+  gap: 0px;
+  opacity: 0px;
+}
+.catalog__list__second .item-name {
+  position: absolute;
+  top: 353px;
+  width: 338px;
+  height: 32px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25.1px;
+  font-weight: 400;
+  line-height: 31.63px;
+  text-align: left;
+}
+.catalog__list__second .price {
+  position: absolute;
+  top: 395px;
+  width: 95px;
+  height: 33px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.catalog__list__second a {
+  position: absolute;
+  width: 361px;
+  height: 74px;
+  top: 443px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B58269;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.catalog__list__second a:hover {
+  cursor: pointer;
+  background: #c38b6f;
+}
+.catalog__list__three {
+  position: absolute;
+  top: 173px;
+  left: 887px;
+  width: 362px;
+  height: 517px;
+}
+.catalog__list__three img {
+  position: absolute;
+  width: 308px;
+  height: 226px;
+  top: 88px;
+  left: 31px;
+  gap: 0px;
+  opacity: 0px;
+}
+.catalog__list__three .item-name {
+  position: absolute;
+  top: 353px;
+  width: 252px;
+  height: 32px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25.1px;
+  font-weight: 400;
+  line-height: 31.63px;
+  text-align: left;
+}
+.catalog__list__three .price {
+  position: absolute;
+  top: 396px;
+  width: 96px;
+  height: 33px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.catalog__list__three a {
+  position: absolute;
+  width: 361px;
+  height: 74px;
+  top: 443px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B58269;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.catalog__list__three a:hover {
+  cursor: pointer;
+  background: #c38b6f;
+}
+.catalog__list__four {
+  position: absolute;
+  top: 172px;
+  left: 1277px;
+  width: 362px;
+  height: 518px;
+}
+.catalog__list__four img {
+  position: absolute;
+  width: 273px;
+  height: 208px;
+  top: 89px;
+  left: 44px;
+  gap: 0px;
+  opacity: 0px;
+}
+.catalog__list__four .item-name {
+  position: absolute;
+  top: 353px;
+  width: 226px;
+  height: 32px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25.1px;
+  font-weight: 400;
+  line-height: 31.63px;
+  text-align: left;
+}
+.catalog__list__four .price {
+  position: absolute;
+  top: 397px;
+  width: 96px;
+  height: 33px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.catalog__list__four a {
+  position: absolute;
+  width: 361px;
+  height: 74px;
+  top: 443px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B58269;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.catalog__list__four a:hover {
+  cursor: pointer;
+  background: #c38b6f;
+}
+
+.about-product {
+  position: absolute;
+  width: 1903px;
+  height: 901px;
+  top: 4000px;
+  gap: 0px;
+  opacity: 0px;
+  angle: -180 deg;
+  background: #000;
+}
+.about-product__background {
+  object-fit: cover;
+  width: 1903px;
+  height: 901px;
+  opacity: 0.6;
+}
+.about-product__needle {
+  position: absolute;
+  width: 123.75px;
+  height: 130px;
+  top: 109px;
+  left: 898px;
+  gap: 0px;
+  opacity: 0px;
+}
+.about-product__commited {
+  position: absolute;
+  width: 780px;
+  height: 42px;
+  top: 289px;
+  left: 575px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Outfit", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 7px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.about-product__quality {
+  position: absolute;
+  width: 1360px;
+  height: 448px;
+  top: 343px;
+  left: 280px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Outfit;
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 112px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.about-product__quality span {
+  font-family: Outfit;
+  font-size: 75px;
+  font-weight: 600;
+  line-height: 112px;
+  text-align: center;
+}
+
+.collections-other {
+  position: absolute;
+  width: 1719px;
+  height: 1319.78px;
+  top: 4901px;
+}
+.collections-other h5 {
+  position: absolute;
+  width: 1000px;
+  height: 95px;
+  top: 90px;
+  left: 440px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 94.5px;
+  text-align: left;
+}
+.collections-other__description {
+  position: absolute;
+  top: 200px;
+  left: 422px;
+  width: 1078px;
+  height: 33px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.collections-other__first-row-cell-first, .collections-other__first-row-cell-second {
+  top: 279px;
+}
+.collections-other__second-row-cell-first, .collections-other__second-row-cell-second, .collections-other__second-row-cell-three {
+  top: 858px;
+}
+
+.reviews {
+  position: absolute;
+  width: 1723px;
+  height: 911px;
+  top: 6414px;
+  left: 97px;
+}
+.reviews__title {
+  position: absolute;
+  width: 921px;
+  height: 236px;
+  top: 173px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 117.63px;
+  text-align: left;
+}
+.reviews__text {
+  position: absolute;
+  width: 847px;
+  height: 258px;
+  top: 479px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 43px;
+  text-align: left;
+}
+.reviews__name {
+  position: absolute;
+  width: 502px;
+  height: 45px;
+  top: 819px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+}
+.reviews__name span {
+  position: relative;
+  top: -2px;
+}
+.reviews__image {
+  position: absolute;
+  width: 705px;
+  height: 836px;
+  top: 0px;
+  left: 1017px;
+  object-fit: cover;
+}
+.reviews__previous {
+  position: absolute;
+  left: 1289px;
+  top: 861px;
+}
+.reviews__previous:hover {
+  cursor: pointer;
+}
+.reviews__next {
+  position: absolute;
+  left: 1453px;
+  top: 861px;
+}
+.reviews__next:hover {
+  cursor: pointer;
+}
+.reviews__count {
+  position: absolute;
+  left: 1351px;
+  top: 861px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 47.05px;
+  text-align: left;
+}
+
+.invis {
+  display: none;
+}
+
+.view-product {
+  position: absolute;
+  width: 1920px;
+  height: 596px;
+  top: 7420px;
+}
+.view-product h4 {
+  position: absolute;
+  width: 1188px;
+  height: 82.83px;
+  top: px;
+  left: 105.83px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 82px;
+  text-align: left;
+}
+.view-product img {
+  width: 480px;
+  height: 486px;
+  object-fit: cover;
+}
+.view-product__image-one {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+.view-product__image-one:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.view-product__image-two {
+  position: absolute;
+  top: 110px;
+  left: 480px;
+}
+.view-product__image-three {
+  position: absolute;
+  top: 110px;
+  left: 960px;
+}
+.view-product__image-four {
+  position: absolute;
+  top: 110px;
+  left: 1440px;
+}
+.view-product__btn {
+  width: 480px;
+  height: 486px;
+}
+.view-product__btn span {
+  position: absolute;
+  font-family: "Outfit", sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: 0.265em;
+  text-align: left;
+  z-index: 90;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 359px;
+  height: 92px;
+  top: 195px;
+  left: 61px;
+  padding: 30px 50px 30px 50px;
+  gap: 10px;
+  border: 4px solid white;
+  opacity: 0px;
+}
+.view-product__wrap {
+  position: absolute;
+  top: 110px;
+  left: 0px;
+  width: 480px;
+  height: 486px;
+  background: #000;
+}
+.view-product__wrap:hover img {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.connection {
+  position: absolute;
+  left: -11px;
+  top: 8016px;
+  width: 1922px;
+  height: 471px;
+  background: #000;
+}
+.connection__image {
+  width: 1922px;
+  height: 471px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.connection__title {
+  position: absolute;
+  width: 766px;
+  height: 95px;
+  top: 131px;
+  left: 104px;
+  font-family: "Outfit", sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 94.5px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.connection__text {
+  position: absolute;
+  width: 714px;
+  height: 64px;
+  top: 236px;
+  left: 104px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: #BEBFBE;
+}
+.connection__email {
+  position: absolute;
+  width: 423px;
+  height: 32px;
+  top: 335px;
+  left: 104px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: #eceaea;
+}
+.connection__phone {
+  position: absolute;
+  width: 284px;
+  height: 80px;
+  top: 175px;
+  left: 1502px;
+  padding: 20px 40px 20px 30px;
+  gap: 11.11px;
+  background: #eceaea;
+}
+.connection__phone__number {
+  position: absolute;
+  top: 22px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.connection__phone__number img {
+  padding-right: 10px;
+  padding-bottom: 3px;
+}
+.connection__work-time {
+  position: absolute;
+  width: 316px;
+  height: 33px;
+  top: 283px;
+  left: 1486px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+  color: #eceaea;
+}
+
+.footer {
+  position: absolute;
+  width: 1920px;
+  height: 943px;
+  top: 8487px;
+  background: #232323;
+}
+.footer__logo {
+  position: absolute;
+  width: 145px;
+  height: 82.61px;
+  top: 56px;
+  left: 105px;
+}
+.footer hr {
+  position: absolute;
+  width: 1720px;
+  height: 1.33px;
+  top: 174px;
+  left: 100px;
+  color: grey;
+}
+.footer__adress {
+  position: absolute;
+  width: 329px;
+  height: 108px;
+  top: 230px;
+  left: 100px;
+  color: #FFFFFF;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: -0.3090909123px;
+  text-align: left;
+}
+.footer__adress span {
+  position: absolute;
+  top: 40px;
+  color: grey;
+  left: 0px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: left;
+}
+.footer__phone {
+  position: absolute;
+  width: 196px;
+  height: 28px;
+  top: 408px;
+  left: 119px;
+  color: grey;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.footer__email {
+  position: absolute;
+  width: 298px;
+  height: 33px;
+  top: 457px;
+  left: 119px;
+  color: grey;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 32.57px;
+  text-align: left;
+}
+.footer__list {
+  position: absolute;
+  width: 281px;
+  height: 462px;
+  top: 229px;
+  left: 750px;
+}
+.footer__list li {
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: left;
+}
+.footer__list a {
+  text-decoration: none;
+  color: grey;
+}
+.footer__list a:hover {
+  color: #ababab;
+}
+.footer__list__title {
+  color: #FFFFFF;
+}
+.footer__newsletter {
+  position: absolute;
+  width: 450px;
+  height: 326px;
+  top: 229px;
+  left: 1370px;
+}
+.footer__newsletter__join {
+  width: 405px;
+  height: 42px;
+  top: -10px;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: -0.4000000358px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.footer__newsletter form {
+  position: absolute;
+  width: 448px;
+  height: 68px;
+  top: 97.92px;
+}
+.footer__newsletter__email {
+  width: 350px;
+  height: 68px;
+  top: 97.92px;
+  background: #232323;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+.footer__newsletter__submit {
+  position: absolute;
+  width: 66.67px;
+  height: 66.67px;
+  top: 0px;
+  left: 381px;
+  gap: 0px;
+  border-radius: 10.67px 10.67px 0px 0px;
+  opacity: 0px;
+  border: none;
+}
+.footer__newsletter__description {
+  position: absolute;
+  width: 450px;
+  height: 140px;
+  top: 196px;
+  left: 0px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.footer__policy-list {
+  position: absolute;
+  width: 587px;
+  height: 32px;
+  top: 757px;
+  left: 50px;
+}
+.footer__policy-list li {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 15px;
+}
+.footer__policy-list a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 31.5px;
+  letter-spacing: -0.2727272809px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.footer__policy-list a:hover {
+  color: #ababab;
+}
+.footer__payment-methods {
+  position: absolute;
+  width: 382px;
+  height: 71px;
+  top: 824px;
+  left: 100px;
+  border: 0.78px 0px 0px 0px;
+}
+.footer__payment-methods img {
+  padding-right: 20px;
+}
+.footer__socials {
+  position: absolute;
+  width: 73px;
+  height: 29.33px;
+  top: 758px;
+  left: 1747px;
+  padding: 0px;
+}
+.footer__socials__fcb {
+  position: relative;
+  top: -1px;
+  padding-right: 24px;
+}
+.footer .help-list {
+  position: absolute;
+  width: 133px;
+  height: 142px;
+  top: 230px;
+  left: 1100px;
+}
