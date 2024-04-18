@@ -10,36 +10,54 @@
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
         <title>Meridian|Homepage</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
 
     <body style='overflow-x:hidden'>
         <div class="header-sale"><p>spring season sale | 20% off entire store | Free Premium UK Delivery</p></div>
-        <div class="container-fluid nav-header">
-           <nav class="nav_left">
+        <div class="nav-header">
+            <div class="nav-header__burger">
+                <button class="nav-header__burger__icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="#">Products</a></li>
+                    <li><a class="dropdown-item" href="#">Showroom</a></li>
+                    <li><a class="dropdown-item" href="#">About us</a></li>
+                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                    <li><a class="dropdown-item" href="#">Dealer Login</a></li>
+                    <li><a class="dropdown-item" href="#">Become A Dealer</a></li>
+                    <li><a class="dropdown-item" href="#">Find A Retail</a></li>
+                </ul>
+            </div>
+           
+
+           <nav class="nav-header__left">
             <a href="#" style="color: #00264B">Home</a>
-            <a href="#">Products</a>
+            <a href="products.html">Products</a>
             <a href="#">Showroom</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
            </nav>
 
-           <img src="/images/Green.png" class="title">
+           <img src="/images/Green.png" class="nav-header__title">
 
-           <nav class="nav_right">
+           <nav class="nav-header__right">
             <a href="#">Dealer Login</a>
             <a href="#">Become A Dealer</a>
             <a href="#">Find A Retail</a>
            </nav>
 
-           <button class="cart"><img src="/images/Cart.png"></button>
-           <button class="search"><img src="/images/Group.png"></button>
+           <button class="nav-header__cart"><img src="/images/Cart.png"></button>
+           <button class="nav-header__search"><img src="/images/Group.png"></button>
         </div>
 
         <div class="shop-collection">
-            <p class="main-text">MODERN, CONTEMPORARY OUTDOOR FURNITURE</p>
-            <p class="shop-collection-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper eget ultrices gravida gravida. Suspendisse pharetra quis eros facilisi.</p>
-            <a href="#" class="shop-collection-button">SHOP COLLESTIONS</a>
-            <img class="shop-collection-img" src="images/973273f390223e88c131c66774da4a7e.jpg">
+            <p class="shop-collection__main-text">MODERN, CONTEMPORARY OUTDOOR FURNITURE</p>
+            <p class="shop-collection__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper eget ultrices gravida gravida. Suspendisse pharetra quis eros facilisi.</p>
+            <a href="#" class="shop-collection__button">SHOP COLLESTIONS</a>
+            <img class="shop-collection__img" src="images/973273f390223e88c131c66774da4a7e.jpg">
         </div>
         
         <div class="collections"> 
@@ -52,6 +70,7 @@
         </div>
 
         <div class="about-us"><img src="images/Simple 3 Column Centered.png"></div>
+        <div class="about-us-mobile"><img src="images/column-mobile.png"></div>
 
         <div class="catalog">
             <h5>Ready To Ship</h5>
@@ -59,29 +78,30 @@
             <div class="container catalog__list">
                 <div class="catalog__list__first">
                     <img src="images/97925ef2bb61014142d39d1b1039b41c.jpg">
-                    <p class="item-name">Alina Velvet Modular Armless</p>
-                    <p class="price">£799.00</p>
+                    <p class="catalog__list__first__item-name">Alina Velvet Modular Armless</p>
+                    <p class="catalog__list__first__price">£799.00</p>
                     <a href="#">View Details Products</a>
                 </div>
                 <div class="catalog__list__second">
                     <img src="images/0d73a47c31f3309fd78b5b06c3d6c588.jpg">
-                    <p class="item-name">Alina Velvet Modular Sectional</p>
-                    <p class="price">£699.00</p>
+                    <p class="catalog__list__second__item-name">Alina Velvet Modular Sectional</p>
+                    <p class="catalog__list__second__price">£699.00</p>
                     <a href="#">View Details Products</a>
                 </div>
                 <div class="catalog__list__three">
                     <img src="images/496acbf8671f08d74f9e0ce0fc99b731.jpg">
-                    <p class="item-name">Serpentine Velvet Sofa</p>
-                    <p class="price">£795.00</p>
+                    <p class="catalog__list__three__item-name">Serpentine Velvet Sofa</p>
+                    <p class="catalog__list__three__price">£795.00</p>
                     <a href="#">View Details Products</a>
                 </div>
                 <div class="catalog__list__four">
                     <img src="images/26b5bd8570ffe4781c8d5c9dafde9654.jpg">
-                    <p class="item-name">Clarion Dining Chair</p>
-                    <p class="price">£795.00</p>
+                    <p class="catalog__list__four__item-name">Clarion Dining Chair</p>
+                    <p class="catalog__list__four__price">£795.00</p>
                     <a href="#">View Details Products</a>
                 </div>      
             </div>
+            <div class="catalog__line-mobile"><span></span></div>
         </div>
 
         <div class=" about-product">
@@ -109,7 +129,7 @@
             <div class="review-0">
                 <h5 class="reviews__title">FURNITURE TO WRITE HOME ABOUT</h5>
                 <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.</p>
-                <p class="reviews__name"><span><img src="images/ant-design_star-filled.png"></span>WADE WARREN</p>
+                <p class="reviews__name"><span><img src="images/ant-design_star-filled.png"><img src="images/ant-design_star-filled.png"><img src="images/ant-design_star-filled.png"><img src="images/ant-design_star-filled.png"><img src="images/ant-design_star-filled.png"></span>WADE WARREN</p>
                 <img class="reviews__image" src="images/973273f390223e88c131c66774da4a7e.jpg">
                 <img class="reviews__previous" src="images/bi_arrow-left-short.png">
                 <img class="reviews__next" src="images/bi_arrow-left-short (1).png">
@@ -150,7 +170,7 @@
                 <h5 class="reviews__title">FURNITURE TO WRITE HOME ABOUT</h5>
                 <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.</p>
                 <p class="reviews__name"><span><img src="images/ant-design_star-filled.png"></span>BYE BYE</p>
-                <img class="reviews__image" src="images/0d73a47c31f3309fd78b5b06c3d6c588.jpg">
+                <img class="reviews__image" src="images/884d08a21b843ab9a31cc1998c1a917d.jpg">
                 <img class="reviews__previous" src="images/bi_arrow-left-short.png">
                 <img class="reviews__next" src="images/bi_arrow-left-short (1).png">
             </div>
@@ -261,5 +281,6 @@
         </div>
 
         <script src="all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
