@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Products</title>
+</head>
+<body style="overflow-x: hidden;">
+    <div class="header-sale"><p>spring season sale | 20% off entire store | Free Premium UK Delivery</p></div>
+    <div class="nav-header">
+      <div class="nav-header__burger">
+        <button class="nav-header__burger__icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Home</a></li>
+            <li><a class="dropdown-item" href="#">Products</a></li>
+            <li><a class="dropdown-item" href="#">Showroom</a></li>
+            <li><a class="dropdown-item" href="#">About us</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+            <li><a class="dropdown-item" href="#">Dealer Login</a></li>
+            <li><a class="dropdown-item" href="#">Become A Dealer</a></li>
+            <li><a class="dropdown-item" href="#">Find A Retail</a></li>
+        </ul>
+      </div>
+        <nav class="nav-header__left">
+         <a href="#" style="color: #00264B">Home</a>
+         <a href="products.html">Products</a>
+         <a href="#">Showroom</a>
+         <a href="#">About Us</a>
+         <a href="#">Contact</a>
+        </nav>
+
+        <img src="/images/Green.png" class="nav-header__title">
+
+        <nav class="nav-header__right">
+         <a href="#">Dealer Login</a>
+         <a href="#">Become A Dealer</a>
+         <a href="#">Find A Retail</a>
+        </nav>
+
+        <button class="nav-header__cart"><img src="/images/Cart.png"></button>
+        <button class="nav-header__search"><img src="/images/Group.png"></button>
+    </div>
+    
+    <hr>
+
+    <p class="link-line"><a href="index.html">HOME</a>/<a style="color: black" href="products.html">PRODUCTS</a></p>
+
+    <div class="products-sale">
+      <img src="images/products/884d08a21b843ab9a31cc1998c1a917d.jpg">
+      <h4 class="products-sale__title">Two Day Sale - Up To 40% Off</h4>
+      <h4 class="products-sale__timer">timer</h4>
+      <p>Ending Soon!</p>
+    </div>
+
+    <p class="collection-title">Collection</p>
+    <p class="item-amount">Showing 1-24 of <span>n</span></p>
+    <p class="item-amount-respon">Showing <span>557</span> products</p>
+    <button class="products-filter">Filter</button>
+    <div class="sort-by">
+      <p class="sort-by__text">Sort by</p>
+      <button class="sort-by__btn"><p>Most recent</p><img src="images/down.jpg"></button>
+    </div>
+    <hr class="products-sort-line">
+    <div class="category-list">
+      <h6 class="category-list__name">Category</h6>
+
+      <div class="accordion accordion-flush" id="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="category-list__input accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Living Room
+            </button>
+          </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <input type="checkbox"><span class="category-list__input">Sofas (20)</span><br>
+                <input type="checkbox"><span class="category-list__input">Love Seats (10)</span><br>
+                <input type="checkbox"><span class="category-list__input">Chairs (15)</span><br>
+                <input type="checkbox"><span class="category-list__input">Sectionals (15)</span><br>
+                <input type="checkbox"><span class="category-list__input">Ottomans (15)</span><br>
+                <input type="checkbox"><span class="category-list__input">Chaise Lounges (15)</span><br>
+                <input type="checkbox"><span class="category-list__input">Collections (15)</span><br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="category-list__input accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Kitchen & Dinning Rooms
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"  data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <input type="checkbox"><span class="category-list__input">Dining Tables & Seating (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Kitchen Islands & Carts (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Display & China Cabinets (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Pantry Cabinets (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Bar Furniture (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Baker's Racks (0)</span><br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="category-list__input accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Bedrooms
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"  data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <input type="checkbox"><span class="category-list__input">Beds & Headboards (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Daybeds (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Dressers & Chests (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Nightstands (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Toddler & Kids Bedroom Furniture (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Makeup Table and Vanities (0)</span><br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="category-list__input accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                  Accents
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"  data-bs-parent="#accordion">
+                <div class="accordion-body">
+                <input type="checkbox"><span class="category-list__input">Wall Decor (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Wallpaper (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Wall & Display Shelves (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Wall Mirrors (0)</span><br>
+                <input type="checkbox"><span class="category-list__input">Art (0)</span><br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="category-list__input accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                  Office/Home Office
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                  <input type="checkbox"><span class="category-list__input">Desks (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Office Chairs (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Filing Cabinets (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Home Office Furniture Sets (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Craft & Sewing Tables (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Printer Stands (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Laptop Carts & Stands (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Bookcases (0)</span><br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="category-list__input accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                  Outdoor Furniture
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"  data-bs-parent="#accordion">
+                <div class="accordion-body">
+                  <input type="checkbox"><span class="category-list__input">Outdoor & Patio Furniture (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Outdoor Shades (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Outdoor Décor (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Garden (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Hot Tubs, Saunas & Pools (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Garage & Outdoor Storage & Organization (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Backyard Play (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Outdoor Fencing & Flooring (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Outdoor Lighting (0)</span><br>
+                  <input type="checkbox"><span class="category-list__input">Grills & Outdoor Cooking (0)</span><br>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="category-list__featured">
+          <h6 class="category-list__name">Featured</h6>
+          <input type="checkbox"><span class="category-list__input">Spring</span><br>
+          <input type="checkbox"><span class="category-list__input">Sale</span><br>
+          <input type="checkbox"><span class="category-list__input">New Arrival</span><br>
+          <input type="checkbox"><span class="category-list__input">Clearance</span><br>
+        </div>
+
+        <hr>
+        
+        <div class="category-list__price-range">
+          <h6 class="category-list__name">Price Range</h6>
+          <span class="category-list__price-range__main-line"> <span class="category-list__price-range__main-line__left-side"></span> <span class="category-list__price-range__main-line__sum"></span> <span class="category-list__price-range__main-line__rigth-side"></span></span>
+          <div class="category-list__price-range__diff">
+            <div class="category-list__price-range__diff__min">
+              <p>Min</p>
+              <input type="text" value="0">
+            </div>
+            <div class="category-list__price-range__diff__max">
+              <p>Max</p>
+              <input type="text" value="max">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <button class="category-list__clear">Clear all</button>
+        
+    </div>
+
+    <div class="products-catalog">
+      <a href="#">
+        <div class="catalog-items products-catalog__item-1">
+          <img src="images/products/43e1ae253df2aafb2c9815c282c45d80.png">
+          <h6>Serene Linen Deluxe Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-2">
+          <img src="images/products/d889a2144bae2c0c5b79902e987eae41.png">
+          <h6>Hilton Boucle Fabric Chaise Lounge</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-3">
+          <img src="images/products/5b6cfe3b14fe1cca5081bc49663c9e5d.png">
+          <h6>Marquis Velvet Sofa</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="">
+        <div class="catalog-items products-catalog__item-4">
+          <img src="images/products/b1189faaf2c9cd7a8cde4327569d2e2a.png">
+          <h6>Siam SSerene Linen Deluxe Cloud </h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-5">
+          <img src="images/products/81007fdd3c1fb4c82132b3c23a0fad73.png">
+          <h6>SiaSerene Linen Deluxe Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#"> 
+        <div class="catalog-items products-catalog__item-6">
+          <img src="images/products/d48c8e004398d8fe839ff22a1ee667e9.png">
+          <h6>Serene Linen Deluxe Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-7">
+          <img src="images/products/a24aba607e46bd410655aeaf8f6de069.png">
+          <h6>Serene Linen Deluxe Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-8">
+          <img src="images/products/53dea84a96c2672f2bb7f2b9937a601f.png">
+          <h6>Serene Linen Deluxe Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-9">
+          <img src="images/products/ccde6d6a75c956549517de2c6fe8380e.jpg">
+          <h6>Alina Velvet Modular Sofa</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-10">
+          <img src="images/products/edaf9a0f8f353c39a2b6df882c94e338.png">
+          <h6>Plush Velvet Standard Cloud</h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-11">
+          <img src="images/products/964512ce6ec92319049d155b1c3e72e6.png">
+          <h6>Marlon Velvet SofaSet 1 </h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="catalog-items products-catalog__item-12">
+          <img src="images/products/33dfdc44ef9396c62b1cf0f4cdda428d.png">
+          <h6>Plush Velvet Standard Cloud </h6>
+          <p>£2,500.00</p>
+        </div>
+      </a>
+      
+    </div>
+
+    <nav class="products-nav" aria-label="Пример навигации по страницам">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link products-page-previous" href="#"><</a></li>
+        <li class="page-item"><a class="page-link active-page products-page-1" href="#">1</a></li>
+        <li class="page-item"><a class="page-link products-page-2" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">></a></li>
+      </ul>
+    </nav>
+
+    <div class="connection products-connection">
+      <img class="connection__image" src="images/76da0bbded32c0f55e3ea9012ebece64.jpg">
+      <h4 class="connection__title">How Can We Help You?</h4>
+      <p class="connection__text">We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.</p>
+      <p class="connection__email">Get In Touch support@Meridian.com </p>
+      <div class="connection__phone">
+          <div class="connection__phone__number"> <img src="images/bx_phone.png">01789 339533</div>
+      </div>
+      <p class="connection__work-time">8am to 6pm, 7 days a week</p>
+    </div>
+
+    <div class="footer products-footer">
+      <img src="images/Green (1).png" class="footer__logo">
+      <hr>
+      <p class="footer__adress">Head Office <span>32 Plum St, Trenton, NJ 08638, United States</span></p>
+      <p class="footer__phone"><img src="images/Vector.png"> 01789 730695</p>
+      <p class="footer__email"><img src="images/Vector (1).png"> support@Meridian.com</p>
+      <ul class="footer__list">
+          <li class="footer__list__title">Product</li>
+          <li><a href="#">New Arrival</a></li>
+          <li><a href="#">Living Room</a></li>
+          <li><a href="#">Kitchen & Dining Room</a></li>
+          <li><a href="#">Bed Room</a></li>
+          <li><a href="#">Accent</a></li>
+          <li><a href="#">Occasional Table</a></li>
+          <li><a href="#">Office/Home Office</a></li>
+          <li><a href="#">Outdoor Furniture</a></li>
+      </ul>
+      <ul class="footer__list help-list">
+          <li class="footer__list__title">Help</li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="footer__newsletter">
+          <p class="footer__newsletter__join">Join Meridian for Exclusive Offers</p>
+          <form>
+              <input class="footer__newsletter__email" type="email" placeholder="Email address">
+              <input class="footer__newsletter__submit" type="submit" value=">">
+          </form>
+          <p class="footer__newsletter__description">Our newsletter is packed full of style ideas, new products and exclusive disounts. We are GDPR compliant, your information is secure with us.</p>
+      </div>
+
+      <ul class="footer__policy-list">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shiping Policy</a></li>
+      </ul>
+
+      <div class="footer__payment-methods">
+          <img src="images/Frame 177.png" alt="" class="footer__payment-methods__mc">
+          <img src="images/Frame 178.png" alt="" class="footer__payment-methods__visa">
+          <img src="images/Frame 180.png" alt="" class="footer__payment-methods__g-pay">
+          <img src="images/Frame 181.png" alt="" class="footer__payment-methods__apple-pay">
+      </div>
+
+      <div class="footer__socials">
+          <a href="#"><img src="images/001-facebook.png" alt="" class="footer__socials__fcb"></a>
+          <a href="#"><img src="images/004-instagram.png" alt="" class="footer__socials__inst"></a>
+      </div>
+  </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
