@@ -1,0 +1,731 @@
+.cart-title
+    display: none
+
+.cart-products
+    position: absolute
+    width: 384px
+    height: 292px
+    top: 176px
+    left: 24px
+    &__titles
+        display: none
+    &__items
+        width: 384px
+        height: 292px
+        &__item         
+            position: relative 
+            width: 384px
+            height: 128px
+            & div
+                display: none
+            & img
+                width: 125px
+                height: 124px
+                object-fit: cover
+            &__name
+                position: absolute
+                width: 241px
+                height: 23px
+                top: 7px
+                left: 143px
+                font-family: "Outfit", sans-serif
+                font-size: 18px
+                font-weight: 400
+                line-height: 22.68px
+                text-align: left
+                color: #888887
+            &__minus
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 15px
+                position: absolute
+                width: 28px
+                height: 30px
+                top: 85px
+                left: 143px
+                border: 1px solid #B6B6B6
+            &__value
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 15px
+                position: absolute
+                width: 28px
+                height: 30px
+                top: 85px
+                left: 170px
+                border: 1px solid #B6B6B6
+                text-align: center
+            &__plus
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 15px
+                position: absolute
+                width: 28px
+                height: 30px
+                top: 85px
+                left: 198px
+                border: 1px solid #B6B6B6
+            &__total
+                    position: absolute
+                    top: 45px
+                    left: 143px
+                    width: 57px
+                    height: 22px
+                    font-family: "Hanken Grotesk", sans-serif
+                    font-size: 18px
+                    font-weight: 600
+                    line-height: 21.6px
+                    text-align: right
+                    color: #FF5B5B
+            &__delete
+                position: absolute
+                width: 66px
+                height: 17px
+                top: 111px
+                left: 312px
+                font-family: "Hanken Grotesk", sans-serif
+                font-size: 14px
+                font-weight: 400
+                line-height: 16.8px
+                text-align: left
+                color: #545454
+                z-index: 999
+                & img
+                    position: absolute
+                    top: 2px
+                    left: 58px
+                    width: 14px
+                    height: 14px
+                &__mobile
+                    display: block
+                    content: 'Remove'
+            
+        &__item-2
+            position: absolute
+            top: 164px
+        &__item-3
+            position: absolute
+            top: 328px
+        &__item-4
+            position: absolute
+            top: 492px
+        &__item-5
+            position: absolute
+            top: 656px
+           
+
+
+.cart-slider
+    position: absolute
+    width: 428px
+    height: 315px
+    top: 528px
+    left: 24px
+    &__list
+        width: 428px
+        height: 315px
+        &__first,
+        &__second,
+        &__three,
+        &__four
+            position: relative
+            width: 200px
+            height: 282px
+            top: 10px
+            & img
+                width: 200px
+                height: 200px
+                object-fit: cover
+            &__item-name
+                position: relative
+                top: 15px
+                left: 6px
+                width: 182px
+                height: 40px
+                font-family: "Outfit", sans-serif
+                font-size: 16px
+                font-weight: 400
+                line-height: 20.16px
+                text-align: left
+            &__price
+                position: relative
+                top: 8px
+                left: 6px
+                width: 44.31px
+                height: 15.64px
+                font-family: "Hanken Grotesk", sans-serif
+                font-size: 13.55px
+                font-weight: 400
+                line-height: 17.66px
+                text-align: left
+                color: #FF5B5B    
+            & a
+                display: none
+        &__second
+            left: 0px
+        &__three
+            left: 0px
+        &__four
+            left: 0px
+
+
+            
+                
+
+             
+            
+
+
+
+
+
+.cart-checkout
+    position: absolute
+    display: block
+    width: 428px
+    height: 195px
+    top: 873px
+    padding: 27px 36px 26.78px 35px
+    background: #F5F5F5
+    &__subtotal
+        display: block
+        width: 60px
+        height: 24px
+        top: 27px
+        left: 35.3px
+        font-family: "Outfit", sans-serif
+        font-size: 16px
+        font-weight: 400
+        line-height: 23.16px
+        text-align: left
+        color: #888887
+    &__total-price
+        position: absolute
+        width: 93px
+        height: 24px
+        top: 27px
+        left: 299px
+        font-family: "Outfit", sans-serif
+        font-size: 16px
+        font-weight: 400
+        line-height: 23.16px
+        text-align: right
+        color: #888887
+    &__checkout
+        position: absolute
+        width: 357px
+        height: 65px
+        top: 60.22px
+        left: 35px
+        padding: 21.07px 90.3px 20.93px 95.7px
+        background: #B58269
+        font-family: "Outfit", sans-serif
+        font-size: 18px
+        font-weight: 400
+        line-height: 22.06px
+        text-align: left
+        text-decoration: none
+        color: #FFFFFF
+    &__discount
+        position: absolute
+        width: 350px
+        height: 23px
+        top: 145.22px
+        left: 45px
+        font-family: "Outfit", sans-serif
+        font-size: 14px
+        font-weight: 400
+        line-height: 23px
+        text-align: left
+        color: #FF5B5B     
+
+    &__price,
+    &__includes,
+    &__free-ship,
+    &__premium-ship,
+    &__total,
+    &__img-1,
+    &__img-2,
+    &__img-3,
+    &__img-4
+        display: none
+
+.cart-quantity,
+.cart-order-title
+    display: none
+
+
+.cart-connection
+    top: 1068px 
+.cart-footer
+    top: 1509px 
+
+
+
+                
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap"
+
+@include media-breakpoint-up(sm)
+
+    .cart-title
+        position: absolute
+        width: 352px
+        height: 69px
+        top: 329px
+        left: 100px
+        font-family: "Outfit", sans-serif
+        font-size: 55px
+        font-weight: 300
+        line-height: 69.3px
+        text-align: center
+
+    .cart-products
+        position: absolute
+        width: 1197px
+        height: 389px
+        top: 428px
+        left: 100px
+        &__titles
+            display: block
+            border: 1px solid #B6B6B6
+            width: 1197px
+            height: 60px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 25px
+            font-weight: 400
+            line-height: 32.57px
+            text-align: center
+            color: #333333
+            &__title-1
+                position: absolute
+                top: 12px
+                left: 78px
+            &__title-2
+                position: absolute
+                top: 12px
+                left: 557px
+            &__title-3
+                position: absolute
+                top: 12px
+                left: 784px
+        &__items
+            position: relative
+            width: 1197px
+            height: 329px
+            &__item  
+                height: 162px
+                width: 1197px
+                display: flex
+                border: 1px solid #B6B6B6
+                & img
+                    position: absolute
+                    width: 114px
+                    height: 126.7px
+                    top: 16px
+                    left: 71px
+                    object-fit: cover
+                &__name
+                    position: absolute
+                    width: 240px
+                    height: 73.35px
+                    top: 44px
+                    left: 215px
+                    font-family: "Hanken Grotesk", sans-serif
+                    font-size: 25px
+                    font-weight: 400
+                    line-height: 32.57px
+                    text-align: left
+                    color: #888887
+                &__minus
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 25px
+                    position: absolute
+                    width: 38px
+                    height: 40px
+                    top: 64px
+                    left: 550px
+                    border: 1px solid #B6B6B6
+                &__minus
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 25px
+                    position: absolute
+                    width: 38px
+                    height: 40px
+                    top: 64px
+                    left: 550px
+                    border: 1px solid #B6B6B6
+                &__value
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 25px
+                    position: absolute
+                    width: 38px
+                    height: 40px
+                    top: 64px
+                    left: 587px
+                    border: 1px solid #B6B6B6
+                    text-align: center
+                &__plus
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 25px
+                    position: absolute
+                    width: 38px
+                    height: 40px
+                    top: 64px
+                    left: 624px
+                    border: 1px solid #B6B6B6
+                &__total
+                    position: absolute
+                    width: 118px
+                    height: 36.68px
+                    top: 65px
+                    left: 768px
+                    font-family: "Hanken Grotesk", sans-serif
+                    font-size: 25px
+                    font-weight: 400
+                    line-height: 32.57px
+                    text-align: left
+                    color: #333333
+                &__delete
+                    position: absolute
+                    width: 25px
+                    height: 28px
+                    top: 68px
+                    left: 1104px
+                    padding: 5.79px 5.21px 5.79px 5.21px
+                    z-index: 999
+                    background: url(images/ic-close.png)
+                    & img
+                        position: absolute
+                        top: 0px
+                        left: 0px
+                        width: 25px
+                        height: 28px
+                    &__mobile
+                        display: none
+                    
+                
+          
+               
+            &__item-2
+                position: absolute
+                top: 162px
+            &__item-3
+                position: absolute
+                top: 324px
+            &__item-4
+                position: absolute
+                top: 486px
+            &__item-5
+                position: absolute
+                top: 648px
+            &__item-6
+                position: absolute
+                top: 810px
+            &__item-7
+                position: absolute
+                top: 972px
+            &__item-8
+                position: absolute
+                top: 1134px
+            &__item-9
+                position: absolute
+                top: 1296px
+            &__item-10
+                position: absolute
+                top: 1458px
+               
+            
+
+    .cart-quantity
+        display: block
+        position: absolute
+        width: 83px
+        height: 33px
+        top: 365px
+        left: 1214px
+        font-family: "Hanken Grotesk", sans-serif
+        font-size: 25px
+        font-weight: 400
+        line-height: 32.57px
+        text-align: right
+
+    .cart-order-title
+        position: absolute
+        width: 395px
+        height: 69px
+        top: 329px
+        left: 1348px
+        font-family: "Outfit", sans-serif
+        font-size: 55px
+        font-weight: 300
+        line-height: 69.3px
+        text-align: left
+
+
+    .cart-checkout
+        position: absolute
+        width: 469px
+        height: 634px
+        top: 428px
+        left: 1349px
+        border: 1px solid #B6B6B6
+        &__subtotal
+            display: block
+            position: absolute
+            width: 78px
+            height: 26px
+            top: 20px
+            left: 21px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 20px
+            font-weight: 400
+            line-height: 25.02px
+            letter-spacing: 0.02em
+            text-align: left
+        &__price
+            display: block
+            position: absolute
+            width: 117px
+            height: 26px
+            top: 20px
+            left: 331.15px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 24px
+            font-weight: 400
+            line-height: 25.02px
+            letter-spacing: 0.02em
+            text-align: right
+        &__includes
+            display: block
+            position: absolute
+            width: 264px
+            height: 26px
+            top: 64px
+            left: 184px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 20px
+            font-weight: 400
+            line-height: 26.06px
+            letter-spacing: 0.02em
+            text-align: right
+            color: #A9A9A9
+        &__free-ship
+            display: block
+            position: absolute
+            width: 427.15px
+            height: 48px
+            top: 129px
+            left: 21px
+            padding: 12px 20.15px 12px 20px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 18px
+            font-weight: 400
+            line-height: 23.45px
+            text-align: left
+            border: 1px solid #D1D1D1
+            background-color: #F9F9F9
+            &__text
+                display: block
+                position: absolute
+                width: 191px
+                height: 23px
+                top: 13px
+                left: 56px
+                & span 
+                    position: absolute
+                    width: 59px
+                    height: 23px
+                    top: 0px
+                    left: 294px
+
+        &__premium-ship
+            display: block
+            position: absolute
+            width: 427.15px
+            height: 48px
+            top: 193px
+            left: 21px
+            padding: 12px 20.15px 12px 20px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 18px
+            font-weight: 400
+            line-height: 23.45px
+            text-align: left
+            border: 1px solid #D1D1D1
+            background-color: #F9F9F9
+            &__text
+                position: absolute
+                width: 191px
+                height: 23px
+                top: 13px
+                left: 56px
+                & span 
+                    position: absolute
+                    width: 59px
+                    height: 23px
+                    top: 0px
+                    left: 294px
+        
+        &__total
+            display: block
+            position: absolute
+            width: 47px
+            height: 26px
+            top: 281px
+            left: 21px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 20px
+            font-weight: 400
+            line-height: 25.02px
+            letter-spacing: 0.02em
+            text-align: left
+
+        &__total-price
+            display: block
+            position: absolute
+            width: 117px
+            height: 26px
+            top: 281px
+            left: 330.6px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 24px
+            font-weight: 400
+            line-height: 25.02px
+            letter-spacing: 0.02em
+            text-align: right
+        
+        &__checkout
+            display: block
+            position: absolute
+            display: flex
+            align-items: center
+            justify-content: center
+            text-decoration: none
+            color: #FFFFFF
+            width: 427px
+            height: 68px
+            top: 330px
+            left: 21px
+            background-color: #B58269
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 20px
+            font-weight: 400
+            line-height: 20.85px
+            letter-spacing: 0.02em
+
+        & img
+            display: block
+            position: absolute
+            width: 71px
+            height: 71px
+            object-fit: cover
+        
+        &__img-1
+            display: block
+            top: 438px
+            left: 52px
+        &__img-2
+            display: block
+            top: 438px
+            left: 150px
+        &__img-3
+            display: block
+            top: 438px
+            left: 248px
+        &__img-4
+            display: block
+            top: 438px
+            left: 346px
+        &__discount
+            display: block
+            position: absolute
+            width: 422px
+            height: 50px
+            top: 549px
+            left: 24px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 20px
+            font-weight: 400
+            line-height: 25px
+            letter-spacing: 0.02em
+            color: #808080
+            text-align: center
+
+    .cart-connection
+        top: 1217px 
+    .cart-footer
+        top: 1688px 
+
+    .cart-slider
+        display: none
+
+        
+
+
+       
+
+      
+        
+
+
+     
+                
+        
+
+
+
+      
+
+
+     
+
+
+
+      
+
+   
+
+  
+
+  
+             
+
+
+
+
+
+               
+
+                
+
+
+
+
