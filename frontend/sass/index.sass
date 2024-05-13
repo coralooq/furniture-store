@@ -45,6 +45,17 @@
         &:hover
             background: #efeded
             transition: 0.2s
+    &__count
+        position: absolute
+        top: 36px
+        left: 383px
+        display: block
+        width: 25px 
+        height: 25px
+        background: #B58269
+        border-radius: 50%
+        text-align: center
+        color: #FFFFFF
     &__search
         display: none
     &__burger
@@ -257,63 +268,10 @@ button
         width: 413px
         height: 285px
         
-        &__first
-            position: relative
-            top: 33px
-            left: 0px
-            width: 199px
-            height: 284px
-            & img
-                position: relative
-                width: 147px
-                height: 147px
-                top: 0px
-                left: 0px
-                gap: 0px
-                opacity: 0px
-            &__item-name
-                position: relative
-                top: 15px
-                width: 178px
-                height: 17px
-                font-family: "Outfit", sans-serif
-                font-size: 13.81px
-                font-weight: 400
-                line-height: 17.39px
-                text-align: left
-
-            &__price
-                position: relative
-                top: 12px
-                width: 53px
-                height: 18px
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #888887
-
-            & a 
-                position: relative
-                width: 198px
-                height: 40px
-                top: 0px
-                display: flex
-                justify-content: center
-                align-items: center
-                background: #B58269
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #FFFFFF
-                text-decoration: none
-                &:hover
-                    cursor: pointer
-                    background: #c38b6f
-        &__second
+        &__first,
+        &__second,
+        &__three,
+        &__four
             position: relative
             top: 33px
             left: 0px
@@ -329,18 +287,17 @@ button
                 opacity: 0px
             &__item-name
                 position: relative
-                top: 19px
-                width: 186px
+                top: 15px
+                width: 250px
                 height: 17px
                 font-family: "Outfit", sans-serif
                 font-size: 13.81px
                 font-weight: 400
                 line-height: 17.39px
                 text-align: left
-
             &__price
                 position: relative
-                top: 16px
+                top: 12px
                 width: 53px
                 height: 18px
                 font-family: "Hanken Grotesk", sans-serif
@@ -353,61 +310,7 @@ button
                 position: relative
                 width: 198px
                 height: 40px
-                top: 4px
-                display: flex
-                justify-content: center
-                align-items: center
-                background: #B58269
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #FFFFFF
-                text-decoration: none
-                &:hover
-                    cursor: pointer
-                    background: #c38b6f
-        &__three
-            position: relative
-            top: 33px
-            left: 0px
-            width: 199px
-            height: 284px
-            & img
-                position: relative
-                width: 169px
-                height: 124px
                 top: 0px
-                left: 31px
-                gap: 0px
-                opacity: 0px
-            &__item-name
-                position: relative
-                top: 37px
-                width: 186px
-                height: 17px
-                font-family: "Outfit", sans-serif
-                font-size: 13.81px
-                font-weight: 400
-                line-height: 17.39px
-                text-align: left
-            &__price
-                position: relative
-                top: 34px
-                width: 53px
-                height: 18px
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #888887
-            & a 
-                position: relative
-                width: 198px
-                height: 40px
-                top: 23px
                 display: flex
                 justify-content: center
                 align-items: center
@@ -423,60 +326,8 @@ button
                     cursor: pointer
                     background: #c38b6f
 
-        &__four
-            position: relative
-            top: 33px
-            left: 0px
-            width: 199px
-            height: 285px
-            & img
-                position: relative
-                width: 140px
-                height: 115px
-                top: 0px
-                left: 15px
-                gap: 0px
-                opacity: 0px
-            &__item-name
-                position: relative
-                top: 46px
-                width: 186px
-                height: 17px
-                font-family: "Outfit", sans-serif
-                font-size: 13.81px
-                font-weight: 400
-                line-height: 17.39px
-                text-align: left
-            &__price
-                position: relative
-                top: 43px
-                width: 53px
-                height: 18px
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #888887
-            & a 
-                position: relative
-                width: 198px
-                height: 40px
-                top: 32px
-                display: flex
-                justify-content: center
-                align-items: center
-                background: #B58269
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 13.75px
-                font-weight: 400
-                line-height: 17.92px
-                text-align: left
-                color: #FFFFFF
-                text-decoration: none
-                &:hover
-                    cursor: pointer
-                    background: #c38b6f
+       
+          
     &__line-mobile
         position: absolute
         top: 465px
@@ -624,7 +475,7 @@ button
         height: 433px
         top: 113px
         left: 0px
-        object-fit: cover
+        viewBox: 0 0 1920 1080
     &__previous
         position: absolute
         left: 140px
@@ -734,7 +585,6 @@ button
 .connection
     position: absolute
     left: 0px
-    top: 6541px
     width: 428px
     height: 441px
     background: #000
@@ -807,6 +657,9 @@ button
         text-align: center
         color: #FFFFFF
 
+    .homepage-connection
+        top: 6541px
+
 
 
 
@@ -814,7 +667,6 @@ button
     position: absolute
     width: 428px
     height: 1859px
-    top: 6982px
     background: #232323
     &__logo
         position: absolute
@@ -1039,6 +891,11 @@ button
         top: 989px
         left: 24px
 
+.homepage-connection
+    top: 6541px
+.homepage-footer
+    top: 6982px
+
 
 
 
@@ -1126,14 +983,20 @@ button
             width: 380px
             height: 78px
         &__cart
+            display: flex
+            justify-content: center
+            align-items: center
             position: absolute
-            top: 45px
-            left: 1725px
+            top: 47px
+            left: 1728px
             width: 40px
             height: 40px
             &:hover
                 background: #efeded
                 transition: 0.2s
+        &__count
+            top: 71px
+            left: 1745px
         &__search
             display: block
             position: absolute
@@ -1381,10 +1244,39 @@ button
             width: 600px
             height: 518px
             overflow: visible
+            & p     
+                position: absolute     
+                top: 353px
+                width: 350px
+                height: 32px    
+                font-family: "Outfit", sans-serif
+                font-size: 25.1px
+                font-weight: 400
+                line-height: 31.63px
+                text-align: left
+            & a
+                position: absolute
+                width: 361px
+                height: 74px
+                top: 443px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #B58269
+                font-family: "Hanken Grotesk", sans-serif
+                font-size: 25px
+                font-weight: 400
+                line-height: 32.57px
+                text-align: left
+                color: #FFFFFF
+                text-decoration: none
+                &:hover
+                    cursor: pointer
+                    background: #c38b6f
             &__first
                 position: absolute
                 top: 0px
-                left: 81px
+                left: 105px
                 width: 362px
                 height: 517px
                 & img
@@ -1392,48 +1284,11 @@ button
                     width: 269px
                     height: 269px
                     top: 61px
-                    left: 41px
-                    gap: 0px
-                    opacity: 0px
-                &__item-name
-                    position: absolute
-                    top: 353px
-                    width: 324px
-                    height: 32px
-                    font-family: "Outfit", sans-serif
-                    font-size: 25.1px
-                    font-weight: 400
-                    line-height: 31.63px
-                    text-align: left
+                    left: 41px      
                 &__price
                     position: absolute
-                    top: 396px
-                    width: 96px
-                    height: 33px
+                    top: 396px !important
                     font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                & a 
-                    position: absolute
-                    width: 361px
-                    height: 74px
-                    top: 443px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    background: #B58269
-                    font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                    color: #FFFFFF
-                    text-decoration: none
-                    &:hover
-                        cursor: pointer
-                        background: #c38b6f
             &__second
                 position: absolute
                 top: 0px
@@ -1445,48 +1300,11 @@ button
                     width: 311px
                     height: 261px
                     top: 81px
-                    left: 26px
-                    gap: 0px
-                    opacity: 0px
-                &__item-name
-                    position: absolute
-                    top: 353px
-                    width: 338px
-                    height: 32px
-                    font-family: "Outfit", sans-serif
-                    font-size: 25.1px
-                    font-weight: 400
-                    line-height: 31.63px
-                    text-align: left
+                    left: 26px         
                 &__price
                     position: absolute
-                    top: 395px
-                    width: 95px
-                    height: 33px
+                    top: 395px !important
                     font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                & a 
-                    position: absolute
-                    width: 361px
-                    height: 74px
-                    top: 443px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    background: #B58269
-                    font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                    color: #FFFFFF
-                    text-decoration: none
-                    &:hover
-                        cursor: pointer
-                        background: #c38b6f
             &__three
                 position: absolute
                 top: 0px
@@ -1498,49 +1316,11 @@ button
                     width: 308px
                     height: 226px
                     top: 88px
-                    left: 31px
-                    gap: 0px
-                    opacity: 0px
-                &__item-name
-                    position: absolute
-                    top: 353px
-                    width: 252px
-                    height: 32px
-                    font-family: "Outfit", sans-serif
-                    font-size: 25.1px
-                    font-weight: 400
-                    line-height: 31.63px
-                    text-align: left
+                    left: 31px 
                 &__price
                     position: absolute
-                    top: 396px
-                    width: 96px
-                    height: 33px
+                    top: 396px !important
                     font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                & a 
-                    position: absolute
-                    width: 361px
-                    height: 74px
-                    top: 443px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    background: #B58269
-                    font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                    color: #FFFFFF
-                    text-decoration: none
-                    &:hover
-                        cursor: pointer
-                        background: #c38b6f
-
             &__four
                 position: absolute
                 top: 0px
@@ -1552,48 +1332,11 @@ button
                     width: 273px
                     height: 208px
                     top: 89px
-                    left: 44px
-                    gap: 0px
-                    opacity: 0px
-                &__item-name
-                    position: absolute
-                    top: 353px
-                    width: 226px
-                    height: 32px
-                    font-family: "Outfit", sans-serif
-                    font-size: 25.1px
-                    font-weight: 400
-                    line-height: 31.63px
-                    text-align: left
+                    left: 44px                           
                 &__price
                     position: absolute
-                    top: 397px
-                    width: 96px
-                    height: 33px
+                    top: 397px !important          
                     font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                & a 
-                    position: absolute
-                    width: 361px
-                    height: 74px
-                    top: 443px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    background: #B58269
-                    font-family: "Hanken Grotesk", sans-serif
-                    font-size: 25px
-                    font-weight: 400
-                    line-height: 32.57px
-                    text-align: left
-                    color: #FFFFFF
-                    text-decoration: none
-                    &:hover
-                        cursor: pointer
-                        background: #c38b6f
         &__line-mobile
             display: none
 
@@ -1856,7 +1599,6 @@ button
     .connection
         position: absolute
         left: -11px
-        top: 8016px
         width: 1922px
         height: 471px
         background: #000
@@ -1935,13 +1677,15 @@ button
             text-align: left
             color: #eceaea
 
+    .homepage-connection
+        top: 8016px
+
 
 
     .footer
         position: absolute
         width: 1920px
         height: 943px
-        top: 8487px
         background: #232323
         &__logo
             position: absolute
@@ -2137,6 +1881,8 @@ button
             top: 230px
             left: 1100px
 
+    .homepage-footer
+        top: 8487px
 
 
 
