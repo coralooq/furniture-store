@@ -103,6 +103,32 @@ if(document.body.querySelector(".cart-products__items")) {
         };
 
     });
+
+
+
+
+    //                     INPUT SHIP
+    let cartCheckout = document.body.querySelector('.cart-checkout');
+    let checkedShip = false;
+    cartCheckout.addEventListener('click', function(event) {
+        if(event.target.tagName != 'INPUT') return;
+        let totalPrice = document.body.querySelector('.cart-checkout__total-price');
+        let premiumShipPrice = +document.body.querySelector('.cart-checkout__premium-ship p span').innerHTML.match(/[\d]+/g).join('').slice(0,-2);
+        if(event.target.closest('div').className == 'cart-checkout__premium-ship') {
+            if(checkedShip) return;
+            sum += premiumShipPrice;
+            plusMinus(4, x, sum.toString(), totalPrice)
+            checkedShip = true;
+        } else {
+            if(!checkedShip) return;
+            sum -= premiumShipPrice;
+            plusMinus(4, x, sum.toString(), totalPrice)
+            checkedShip = false;
+        };    
+    })
 };
+
+
+
 
 
