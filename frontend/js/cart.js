@@ -126,6 +126,165 @@ if(document.body.querySelector(".cart-products__items")) {
             checkedShip = false;
         };    
     })
+    
+    
+
+
+    //                              LOAD AND DELETE ADDED ITEMS
+
+    let countItems = 1;
+    let containerItem;
+    window.addEventListener('DOMContentLoaded', function(event) {
+        let idList = localStorage.getItem('idList').split('.');
+        let arridList = idList.splice(0, idList.length-1);
+
+        for(let id of arridList) {
+            let mainContainer = document.querySelector('.cart-products__items');
+            let itemInfo = JSON.parse(localStorage.getItem(`${id}`));
+            let infoName = itemInfo.itemName;
+            let infoPrice = itemInfo.itemPrice;
+            let infoImg = itemInfo.itemImg;
+
+
+            let cartQuantity = document.body.querySelector('.cart-quantity');
+            if(arridList.length >= 2) {
+                cartQuantity.innerHTML = `${arridList.length} items`;
+            }  else cartQuantity.innerHTML = `1 item`;
+
+
+            containerItem = document.createElement('div');
+            containerItem.classList.add(`cart-products__items__item-${countItems}`);
+            containerItem.classList.add(`cart-products__items__item`);
+            containerItem.style.display = 'block';
+
+            let itemImg = document.createElement('img');
+            itemImg.src = infoImg;
+            containerItem.append(itemImg);
+            
+
+            let itemName = document.createElement('p');
+            itemName.innerHTML = infoName;
+            itemName.classList.add(`cart-products__items__item-${countItems}__name`);
+            itemName.classList.add(`cart-products__items__item__name`);
+            containerItem.append(itemName);
+
+            let itemPlus = document.createElement('button');
+            itemPlus.innerHTML = '+'
+            itemPlus.classList.add(`cart-products__items__item-${countItems}__plus`);
+            itemPlus.classList.add(`cart-products__items__item__plus`);
+            containerItem.append(itemPlus);
+            let itemMinus = document.createElement('button');
+            itemMinus.innerHTML = '-'
+            itemMinus.classList.add(`cart-products__items__item-${countItems}__minus`);
+            itemMinus.classList.add(`cart-products__items__item__minus`);
+            containerItem.append(itemMinus);
+            let itemAmount = document.createElement('input');
+            itemAmount.value = '1';
+            itemAmount.classList.add(`cart-products__items__item-${countItems}__value`);
+            itemAmount.classList.add(`cart-products__items__item__value`);
+            containerItem.append(itemAmount);
+
+            let itemPrice = document.createElement('p');
+            itemPrice.innerHTML = infoPrice;
+            itemPrice.classList.add(`cart-products__items__item-${countItems}__total`);
+            itemPrice.classList.add(`cart-products__items__item__total`);
+            containerItem.append(itemPrice);
+
+            let deleteItemBtn = document.createElement('button');
+            if(document.documentElement.clientWidth <= 574) {
+                deleteItemBtn.innerHTML = 'Remove';
+
+            }
+            deleteItemBtn.classList.add(`cart-products__items__item-${countItems}__delete`);
+            deleteItemBtn.classList.add(`cart-products__items__item__delete`);
+            containerItem.append(deleteItemBtn);
+            
+
+            mainContainer.append(containerItem);
+            countItems++;
+        };
+
+        if(arridList.length > 2 && document.documentElement.clientWidth <= 574) {
+            let count = arridList.length - 2;
+            console.log(+getComputedStyle(containerItem).height.match(/\d*/).join('') * count);
+            let newPos = +getComputedStyle(containerItem).height.match(/\d*/).join('') * count;
+            let footer = document.body.querySelector('.cart-footer');
+            let connection = document.body.querySelector('.cart-connection');
+            let slider = document.body.querySelector('.cart-slider');
+            let checkout = document.body.querySelector('.cart-checkout');
+            console.log(+getComputedStyle(slider).top.match(/\d*/).join(''));
+            slider.style.top =  +getComputedStyle(slider).top.match(/\d*/).join('') + newPos + (36 * count) + 'px';
+            checkout.style.top =  +getComputedStyle(checkout).top.match(/\d*/).join('') + newPos + (36 * count)+ 'px';
+            footer.style.top =  +getComputedStyle(footer).top.match(/\d*/).join('') + newPos + + (36 * count) + 'px';
+            connection.style.top =  +getComputedStyle(connection).top.match(/\d*/).join('') + newPos + + (36 * count) + 'px';
+        
+        };
+
+        if(arridList.length > 4) {
+            let count = arridList.length - 4;
+            let newPos = +getComputedStyle(containerItem).height.match(/\d*/).join('') * count;
+            let footer = document.body.querySelector('.cart-footer');
+            footer.style.top =  +getComputedStyle(footer).top.match(/\d*/).join('') + newPos + 'px';
+            let connection = document.body.querySelector('.cart-connection');
+            connection.style.top =  +getComputedStyle(connection).top.match(/\d*/).join('') + newPos + 'px';
+        };
+
+
+
+        
+
+        let deleleItem = document.body.querySelector('.cart-products__items');
+        let deleleItemCount = +document.body.querySelector('.cart-quantity').innerHTML.match(/\d*/).join('');
+
+
+        deleleItem.addEventListener('click', function(event) {
+            if(!event.target.className.includes('delete')) return;
+            for(let i = 1; i <= arridList.length; i++) {
+                if(event.target.className.includes(`item-${i}`)) {
+                    let itemsCount = document.querySelector('.nav-header__count');
+                    let item = document.querySelector(`.cart-products__items__item-${i}`);
+                    let itemName = document.querySelector(`.cart-products__items__item-${i}__name`).innerHTML;
+                    let uppercaseOfName = itemName.match(/[A-Z]/g).join('');
+                    for(let elem of arridList) {
+                        if(elem == uppercaseOfName) {
+                            let newCount = (+localStorage.getItem('itemCount') - 1).toString();
+                            localStorage.setItem('itemCount', `${newCount}`);
+                            itemsCount.innerHTML = localStorage.getItem('itemCount');
+                            localStorage.removeItem(`${uppercaseOfName}`);
+                            let c = localStorage.getItem('idList').split('.');
+                            let a =  c.splice(0, c.length-1).filter(item => item != uppercaseOfName).join('.');
+                            let totalPrice = document.querySelector('.cart-checkout__total-price');
+                            let checkOutPrice = document.querySelector('.cart-checkout__price');
+                            localStorage.setItem('idList', `${a}.`);
+                            sum -= document.body.querySelector(`.cart-products__items__item-${i}__total`).innerHTML.match(/[\d]+/g).join('').slice(0,-2);
+                            plusMinus(4, x, sum.toString(), checkOutPrice);
+                            plusMinus(4, x, sum.toString(), totalPrice);
+                            
+                        };
+                    };
+                    item.remove();
+                    deleleItemCount = deleleItemCount - 1;
+                    deleleItemCount <= 1? document.body.querySelector('.cart-quantity').innerHTML = `${deleleItemCount} item` : document.body.querySelector('.cart-quantity').innerHTML = `${deleleItemCount} items`;
+
+                    for(let j = i+1; j <= arridList.length; j++) {
+                        let currentPos = document.querySelector(`.cart-products__items__item-${j}`);
+                        if(currentPos == null) continue;
+                        let newPos = +getComputedStyle(currentPos).top.match(/\d*/).join('');
+                        currentPos.style.top = newPos - currentPos.getBoundingClientRect().height + 'px';
+                    };
+                };
+                if(localStorage.getItem('idList') == '.') localStorage.removeItem('idList');
+                
+            }
+        });
+
+        
+    });
+    
+    if(localStorage.getItem('itemCount')) {
+        let itemsCount = document.body.querySelector('.nav-header__count');
+        itemsCount.innerHTML = localStorage.getItem('itemCount');
+    }
 };
 
 
