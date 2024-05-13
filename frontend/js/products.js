@@ -163,6 +163,115 @@ if(document.body.querySelector('.collection-title')) {
 
 
 
-    
+    //             PRICE RANGE
+
+
+    let amountOne = document.body.querySelector('#amount-1');
+    let amountTwo = document.body.querySelector('#amount-2');
+    let amountOneCount = 0;
+    let amountTwoCount = 4700;
+
+    $( function() {
+        $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 4700,
+        values: [ 75, 4700 ],
+        slide: function( event, ui ) {
+            $( "#amount-1" ).val( "£" + ui.values[ 0 ]);
+            $( "#amount-2" ).val( "£" + ui.values[ 1 ]);
+            //console.log(+amountOne.value.slice(1));
+            let count;
+            if(+amountTwo.value.slice(1) < amountTwoCount) {
+                
+                for(let i = 1; i <= 12; i++) {
+                    let price = document.body.querySelector(`.products-catalog__item-${i} p`);
+                    if(+amountTwo.value.slice(1) < +price.innerHTML.match(/[\d]+/g).join('').slice(0,-2)) {
+                        let item = document.body.querySelector(`.products-catalog__item-${i}`);
+                        item.style.display = 'none';
+                        let selectedItems = document.body.querySelectorAll(`.products-catalog__item-${i}`);
+                        
+                        
+                    } 
+                    //console.log(+item.innerHTML.match(/[\d]+/g).join('').slice(0,-2));
+                
+                }
+            }
+            if(+amountTwo.value.slice(1) <= amountTwoCount) {
+                for(let i = 1; i <= 12; i++) {
+                    let price = document.body.querySelector(`.products-catalog__item-${i} p`);
+                    if(+amountTwo.value.slice(1) >= +price.innerHTML.match(/[\d]+/g).join('').slice(0,-2)) {
+                        let item = document.body.querySelector(`.products-catalog__item-${i}`);
+                        let catalog = document.body.querySelector(`.products-catalog`);
+                        item.style.display = 'block';
+                        
+                        
+                    }
+                    //console.log(+item.innerHTML.match(/[\d]+/g).join('').slice(0,-2));
+                
+                }
+            }
+
+            if(+amountOne.value.slice(1) > amountOneCount) {
+                for(let i = 1; i <= 12; i++) {
+                    let price = document.body.querySelector(`.products-catalog__item-${i} p`);
+                    if(+amountOne.value.slice(1) > +price.innerHTML.match(/[\d]+/g).join('').slice(0,-2)) {
+                        let item = document.body.querySelector(`.products-catalog__item-${i}`);
+                        let catalog = document.body.querySelector(`.products-catalog`);
+                        item.style.display = 'none';
+                        
+                        
+                    }
+                    //console.log(+item.innerHTML.match(/[\d]+/g).join('').slice(0,-2));
+                
+                }
+            }
+            if(+amountOne.value.slice(1) < amountOneCount) {
+                for(let i = 1; i <= 12; i++) {
+                    let price = document.body.querySelector(`.products-catalog__item-${i} p`);
+                    if(+amountOne.value.slice(1) < +price.innerHTML.match(/[\d]+/g).join('').slice(0,-2)) {
+                        let item = document.body.querySelector(`.products-catalog__item-${i}`);
+                        let catalog = document.body.querySelector(`.products-catalog`);
+                        item.style.display = 'block';
+                    
+                        
+                    }
+                    //console.log(+item.innerHTML.match(/[\d]+/g).join('').slice(0,-2));
+                    
+                }
+            }
+
+        }
+        });
+        
+    });
+
+    let clearAllBtn = document.body.querySelector('.category-list__clear');
+
+    clearAllBtn.addEventListener('click', function(event) {
+        let all = document.querySelectorAll('.category-list input');
+        console.log(all);
+        for(let elem of all) {
+            elem.checked = false
+        };
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 4700,
+            values: [ 0, 4700 ],
+        
+        })
+        amountOne.value = '£0'
+        amountTwo.value = '£4700';
+        for(let i = 1; i <= 12; i++) {
+            let product = document.body.querySelector(`.products-catalog__item-${i}`);
+            product.style.display = 'block'
+        }
+
+    });
+    if(localStorage.getItem('itemCount')) {
+        let itemsCount = document.body.querySelector('.nav-header__count');
+        itemsCount.innerHTML = localStorage.getItem('itemCount');
+    }
 };
 
