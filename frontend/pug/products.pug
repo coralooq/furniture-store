@@ -1,0 +1,219 @@
+doctype html 
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+        script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css")
+        script(src="https://code.jquery.com/jquery-3.7.1.js")
+        script(src="https://code.jquery.com/ui/1.13.3/jquery-ui.js")
+        link(rel='stylesheet' href='style.css')
+        title Products
+    body
+        header
+            div.header-sale
+                p spring season sale | 20% off entire store | Free Premium UK Delivery
+            div.nav-header 
+                div.nav-header__burger 
+                    button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                        span
+                    ul.dropdown-menu
+                        li 
+                            a.dropdwon-item(href="index.html") Home
+                        li 
+                            a.dropdown-item(href="products.html") Products 
+                        li
+                            a.dropdown-item(href="#") Showroom 
+                        li
+                            a.dropdown-item(href="about-us.html") About Us
+                        li 
+                            a.dropdown-item(href="contact-us.html") Contact 
+                nav.nav-header__left 
+                    a(href="index.html") Home 
+                    a(href="products.html" style='color: #00264B') Products 
+                    a(href="faq.html") FAQ
+                    a(href="about-us.html") About Us 
+                    a(href="contact-us.html") Contact
+                img.nav-header__title(src="/images/Green.png" alt="#")      
+                nav.nav-header__right 
+                    a(href="#") Dealer Login 
+                    a(href="#") Become A Dealer 
+                    a(href="#") Find A Retail 
+                a.nav-header__cart(href="cart.html")
+                    img(src="/images/Cart.png" alt="#") 
+                p.nav-header__count 0
+                button.nav-header__search 
+                    img(src="/images/Group.png" alt="#") 
+        hr
+        p.link-line #[a(href="index.html") HOME]/#[a(href="products.html" style="color: black") PRODUCTS]
+        div.products-sale
+            img(src="images/products/884d08a21b843ab9a31cc1998c1a917d.jpg" alt="#")
+            h4.products-sale__title Two Day Sale - Up To 40% Off
+            h4.products-sale__timer
+            p Ending Soon!
+        p.collection-title Collection
+        p.item-amount Showing 1-24 of #[span n]
+        p.item-amount-respon Showing #[span 557] products
+        button.products-filter Filter
+        div.sort-by
+            p.sort-by__text Sort by
+            input.sort-by__btn(type='button', value='Most recent')
+            div.sort-by__menu
+                button.sort-by__btn-recent
+                    span.sort-by__btn__text Most recent 
+                button.sort-by__btn-remote
+                    span.sort-by__btn__text Most remote
+        hr.products-sort-line
+        mixin accordion(dataBsTarget, ariaExpanded, ariaControls, question, id, sections)
+            div.accordion-item
+                h2.accordion-header
+                    button(class='category-list__input-btn accordion-button collapsed' type="button" data-bs-toggle="collapse" data-bs-target=dataBsTarget aria-expanded=ariaExpanded aria-controls=ariaControls) #{question}
+                div(id=id class="accordion-collapse collapse" data-bs-parent="#accordion")
+                    div.accordion-body
+                        for section in sections 
+                            input(type="checkbox") 
+                            span.category-list__input #{section}
+                            br                
+        div.category-list
+            h6.category-list__name Category
+            div(class="accordion accordion-flush" id="accordion")
+                +accordion("#panelsStayOpen-collapseOne", "true", "panelsStayOpen-collapseOne", "Living Room", "panelsStayOpen-collapseOne", ["Sofas (20)", "Love Seats (10)", "Chairs (15)", "Sectionals (15)", "Ottomans (15)", "Chaise Lounges (15)", "Collections (15)"])
+                +accordion("#panelsStayOpen-collapseTwo", "false", "panelsStayOpen-collapseTwo", "Kitchen & Dinning Rooms", "panelsStayOpen-collapseTwo", ["Dining Tables & Seating (0)", "Kitchen Islands & Carts (0)", "Display & China Cabinets (0)", "Pantry Cabinets (0)", "Bar Furniture (0)", "Baker's Racks (0)"])
+                +accordion("#panelsStayOpen-collapseThree", "false", "panelsStayOpen-collapseThree", "Bedrooms", "panelsStayOpen-collapseThree", ["Beds & Headboards (0)", "Daybeds (0)", "Dressers & Chests (0)", "Nightstands (0)", "Toddler & Kids Bedroom Furniture (0)", "Makeup Table and Vanities (0)"])
+                +accordion("#panelsStayOpen-collapseFour", "false", "panelsStayOpen-collapseFour", "Accents", "panelsStayOpen-collapseFour", ["Wall Decor (0)", "Wallpaper (0)", "Wall & Display Shelves (0)", "Wall Mirrors (0)", "Art (0)"])
+                +accordion("#panelsStayOpen-collapseFive", "false", "panelsStayOpen-collapseFive", "Office/Home Office", "panelsStayOpen-collapseFive", ["Desks (0)", "Office Chairs (0)", "Filing Cabinets (0)", "Home Office Furniture Sets (0)", "Craft & Sewing Tables (0)", "Printer Stands (0)", "Laptop Carts & Stands (0)", "Bookcases (0)"])
+                +accordion("#panelsStayOpen-collapseSix", "false", "panelsStayOpen-collapseSix", "Outdoor Furniture", "panelsStayOpen-collapseSix", ["Outdoor & Patio Furniture (0)", "Outdoor Shades (0)", "Outdoor Décor (0)", "Garden (0)", "Hot Tubs, Saunas & Pools (0)", "Garage & Outdoor Storage & Organization (0)", "Backyard Play (0)", "Outdoor Fencing & Flooring (0)", "Outdoor Lighting (0)", "Grills & Outdoor Cooking (0)"])
+            hr
+            div.category-list__featured
+                h6.category-list__name Featured
+                input(type="checkbox")
+                span.category-list__input Spring
+                br
+                input(type="checkbox")
+                span.category-list__input Sale
+                br
+                input(type="checkbox")
+                span.category-list__input New Arrival
+                br
+                input(type="checkbox")
+                span.category-list__input Clearance
+                br
+            hr
+            div.category-list__price-range
+                h6.category-list__name Price Range
+                span.category-list__price-range__main-line(id="slider-range")
+                div.category-list__price-range__diff
+                    div.category-list__price-range__diff__min
+                        p Min
+                        input(id="amount-1" type="text" value="0")
+                    div.category-list__price-range__diff__max
+                        p Max
+                        input(id="amount-2" type="text" value="max")
+            hr
+            button.category-list__clear Clear all
+        mixin catalog(className, href, img, itemName, price, style)
+            if className == "products-catalog__item-1"
+                div(class=className+" catalog-items")
+                    a(href=href)
+                        img(src=img alt="#") 
+                        h6=itemName 
+                        p=price
+            else
+                a(href=href)
+                    div(class=className+" catalog-items")
+                        img(src=img style=style alt="#") 
+                        h6=itemName 
+                        p=price
+        div.products-catalog
+            +catalog("products-catalog__item-1", "product-page-1.html", "images/product-page/3890d21c6cdc7a4bf462bc86ff91575c.jpg", "Alma Velvet Armless", "£1,500.00")
+            +catalog("products-catalog__item-2", "product-page-2.html", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "Alma Black Armless", "£1,000.00")
+            +catalog("products-catalog__item-3", "product-page-3.html", "images/a798eab4708ba9edc0282582609cd22c.jpg", "Emerald Sofa", "£3,000.00")
+            +catalog("products-catalog__item-4", "product-page-4.html", "images/7d7d4b82a531be0f1914fd001832ab34.jpg", "Alma White Sofa", "£2,500.00")
+            +catalog("products-catalog__item-5", "product-page-5.html", "images/e442850037f6bf4bfd7620dd715d7842.jpg", "Luxe Grey Bed", "£2,700.00")
+            +catalog("products-catalog__item-6", "product-page-6.html", "images/97925ef2bb61014142d39d1b1039b41c.jpg", "Alma Black Armchair Standard", "£1,000.00")
+            +catalog("products-catalog__item-7", "product-page-7.html", "images/5805732c87d430e05a32469187b4d149.jpg", "Luxe Black Chair", "£800.00")
+            +catalog("products-catalog__item-8", "product-page-8.html", "images/19ed00f36471da97a65926d702f404e2.jpg", "Marlon Sofa Set Blue", "£4,700.00")
+            +catalog("products-catalog__item-9", "product-page-9.html", "images/0a03de64d6ef401889db7518d1b51d8a.jpg", "Alma Sofa Set Grey", "£4,300.00")
+            +catalog("products-catalog__item-10", "product-page-10.html", "images/59f3d60c7d0bb54a7a52bd11eeaa18d3.jpg", "Luxe White Chair", "£800.00")
+            +catalog("products-catalog__item-11", "product-page-11.html", "images/454abb288cfa1cf4c096f0a5b7313115.jpg", "Luxe Dark Grey Bed", "£2,700.00")
+            +catalog("products-catalog__item-12", "product-page-12.html", "images/26b5bd8570ffe4781c8d5c9dafde9654.jpg", "Clarion Dining Chair", "£800.00", "object-fit:initial;")
+        nav.products-nav
+            ul.pagination
+                li.page-item
+                    a(class="page-link products-page-previous" href="#") &lt;
+                li.page-item
+                    a(class="page-link active-page products-page-1" href="#") 1
+                li.page-item
+                    a(class="page-link products-page-2" href="#") 2
+                li.page-item
+                    a(class="page-link" href="#") > 
+        div(class='connection products-connection')
+            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+            h4.connection__title How Can We Help You?
+            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+            p.connection__email Get In Touch support@Meridian.com
+            div.connection__phone
+                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+            p.connection__work-time 8am to 6pm, 7 days a week
+        footer
+            div(class='footer products-footer')
+                img.footer__logo(src='images/Green(1).png' alt="#")
+                hr
+                p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]
+                p.footer__phone #[img(src='images/Vector.png' alt="#")] 01789 730695
+                p.footer__email #[img(src='images/Vector(1).png' alt="#")] support@Meridian.com
+                ul.footer__list
+                    li.footer__list__title Product 
+                    li 
+                        a(href='#') New Arrival
+                    li 
+                        a(href='#') Living Room
+                    li
+                        a(href='#') Kitchen & Dining Room
+                    li
+                        a(href='#') Bed Room
+                    li
+                        a(href='#') Accent
+                    li 
+                        a(href='#') Occasional Table
+                    li
+                        a(href='#') Office/Home Office
+                    li
+                        a(href="#") Outdoor Furniture
+                ul(class='footer__list help-list')
+                    li.footer__list__title Help
+                    li
+                        a(href='about-us.html') About Us
+                    li
+                        a(href='contact-us.html') Contact
+                div.footer__newsletter
+                    p.footer__newsletter__join Join Meridian for Exclusive Offers
+                    form
+                        input.footer__newsletter__email(type='email' placeholder="Email address")
+                        input.footer__newsletter__submit(type="submit" value=">")
+                    p.footer__newsletter__description Our newsletter is packed full of style ideas, new products and exclusive disounts. We are GDPR compliant, your information is secure with us.
+                ul.footer__policy-list
+                    li 
+                        a(href='#') Terms & Conditions
+                    li 
+                        a(href="#") Privacy Policy
+                    li 
+                        a(href="#") Shiping Policy
+                div.footer__payment-methods
+                    img.footer__payment-methods__mc(src="images/Frame177.png" alt="#")
+                    img.footer__payment-methods__visa(src='images/Frame178.png' alt="#")
+                    img.footer__payment-methods__g-pay(src='images/Frame180.png' alt="#")
+                    img.footer__payment-methods__apple-pay(src='images/Frame181.png' alt="#")
+                div.footer__socials
+                    a(href="#")
+                        img.footer__socials__fcb(src="images/001-facebook.png" alt="#")
+                    a(href="#")
+                        img.footer__socials__inst(src='images/004-instagram.png' alt="#")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
+        script(src="main.js")
+                  
+

@@ -5,6 +5,9 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
 const cleancss = require('gulp-clean-css');
 const clean = require('gulp-clean');
+const cssnano = require('gulp-cssnano');
+const gulpPug = require('gulp-pug');
+
 
 function browsersync() {
     browserSync.init({
@@ -14,9 +17,16 @@ function browsersync() {
     })
 };
 
+function pug() {
+    return src('frontend/pug/*.pug')
+    .pipe(gulpPug())
+    .pipe(dest('./public/'))
+    .pipe(browserSync.stream())
+}
+
 function scripts() {
     return src('frontend/js/*.js')
-    .pipe(concat('all.js'))
+    .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(dest('./public/'))
     .pipe(browserSync.stream())
@@ -46,6 +56,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.cleandir = cleandir;
+exports.pug = pug;
 
-exports.build = series(cleandir, styles, scripts);
-exports.default = parallel(styles, scripts, browsersync, startwatch);
+exports.build = series(cleandir, styles, scripts, pug);
+exports.default = parallel(pug, styles, scripts, browsersync, startwatch);

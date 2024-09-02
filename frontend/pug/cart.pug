@@ -1,0 +1,160 @@
+doctype html 
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='style.css')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+        title Cart Page
+        link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    body
+        header
+            div.header-sale
+                p spring season sale | 20% off entire store | Free Premium UK Delivery
+            div.nav-header 
+                div.nav-header__burger 
+                    button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                        span
+                    ul.dropdown-menu
+                        li 
+                            a.dropdwon-item(href="index.html") Home
+                        li 
+                            a.dropdown-item(href="products.html") Products 
+                        li
+                        a.dropdown-item(href="faq.html") FAQ 
+                        li
+                            a.dropdown-item(href="about-us.html") About Us
+                        li 
+                            a.dropdown-item(href="contact-us.html") Contact 
+                nav.nav-header__left 
+                    a(href="index.html") Home 
+                    a(href="products.html") Products 
+                    a(href="faq.html") FAQ
+                    a(href="about-us.html") About Us 
+                    a(href="contact-us.html") Contact
+                img.nav-header__title(src="/images/Green.png" alt="#")      
+                nav.nav-header__right 
+                    a(href="#") Dealer Login 
+                    a(href="#") Become A Dealer 
+                    a(href="#") Find A Retail 
+                a.nav-header__cart(href="cart.html")
+                    img(src="/images/Cart.png" alt="#") 
+                p.nav-header__count 0
+                button.nav-header__search 
+                    img(src="/images/Group.png" alt="#") 
+        hr
+        p.link-line #[a(href="index.html") HOME]/#[a(href="products.html") SHOPPING CART]
+        h1.cart-title Shopping Cart
+        div.cart-products
+            div(class='cart-products__titles container text-center')
+                div(class='row align-items-start')
+                    div.col-5
+                        p.cart-products__titles__title-1 Products
+                    div.col-2
+                        p.cart-products__titles__title-2 Quantity
+                    div.col-5
+                        p.cart-products__titles__title-3 Total
+            div.cart-products__items
+        mixin cartSlider(containerClass, img, nameClass, itemName, priceClass, price, href)
+            div(class=containerClass)
+                img(src=img, alt="#")
+                p(class=nameClass) #{itemName}
+                p(class=priceClass) #{price}
+                a(href=href) View Details Products
+        div.cart-slider
+            h5 How About These?
+            div(class="cart-slider__list multiple-items")
+                +cartSlider("cart-slider__list__first", "images/products/edaf9a0f8f353c39a2b6df882c94e338.png", "cart-slider__list__first__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__first__price", "£1,600.00", "#")
+                +cartSlider("cart-slider__list__second", "images/products/33dfdc44ef9396c62b1cf0f4cdda428d.png", "cart-slider__list__second__item-name", "Plush Velvet Standard Cloud", "cart-slider__list__second__price", "£1,100.00", "#")
+                +cartSlider("cart-slider__list__three", "images/products/d48c8e004398d8fe839ff22a1ee667e9.png", "cart-slider__list__three__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__three__price", "£1,000.00", "#")
+                +cartSlider("cart-slider__list__four", "images/products/964512ce6ec92319049d155b1c3e72e6.png", "cart-slider__list__four__item-name", "Marlon Velvet SofaSet 1", "cart-slider__list__four__price", "£2,500.00", "#")
+        p.cart-quantity 0 items
+        h1.cart-order-title Order Summary
+        div.cart-checkout
+            p.cart-checkout__subtotal Subtotal
+            p.cart-checkout__price £0
+            p.cart-checkout__includes (includes £416.67 20% VAT)
+            div.cart-checkout__free-ship 
+                input(type="radio" name="shipping" value="ship1")
+                p.cart-checkout__free-ship__text Standard Free Shipping #[span £00.00]
+            div.cart-checkout__premium-ship
+                input(type="radio" name="shipping" value="ship2")
+                p.cart-checkout__premium-ship__text Premiuim Shipping #[span £118.00]
+            p.cart-checkout__total Total
+            p.cart-checkout__total-price £0
+            a.cart-checkout__checkout(href="#") Proceed To Checkout
+            img.cart-checkout__img-1(src="images/Frame177.png" alt="#")
+            img.cart-checkout__img-2(src="images/Frame178.png" alt="#")
+            img.cart-checkout__img-3(src="images/Frame180.png" alt="#")
+            img.cart-checkout__img-4(src="images/Frame181.png" alt="#")
+            p.cart-checkout__discount Discount be active after entering the checkout process
+        div(class='connection cart-connection')
+            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+            h4.connection__title How Can We Help You?
+            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+            p.connection__email Get In Touch support@Meridian.com
+            div.connection__phone
+                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+            p.connection__work-time 8am to 6pm, 7 days a week
+        footer
+            div(class='footer cart-footer')
+                img.footer__logo(src='images/Green(1).png' alt="#")
+                hr
+                p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]
+                p.footer__phone #[img(src='images/Vector.png' alt="#")] 01789 730695
+                p.footer__email #[img(src='images/Vector(1).png' alt="#")] support@Meridian.com
+                ul.footer__list
+                    li.footer__list__title Product 
+                    li 
+                        a(href='#') New Arrival
+                    li 
+                        a(href='#') Living Room
+                    li
+                        a(href='#') Kitchen & Dining Room
+                    li
+                        a(href='#') Bed Room
+                    li
+                        a(href='#') Accent
+                    li 
+                        a(href='#') Occasional Table
+                    li
+                        a(href='#') Office/Home Office
+                    li
+                        a(href="#") Outdoor Furniture
+                ul(class='footer__list help-list')
+                    li.footer__list__title Help
+                    li
+                        a(href='about-us.html') About Us
+                    li
+                        a(href='contact-us.html') Contact
+                div.footer__newsletter
+                    p.footer__newsletter__join Join Meridian for Exclusive Offers
+                    form
+                        input.footer__newsletter__email(type='email' placeholder="Email address")
+                        input.footer__newsletter__submit(type="submit" value=">")
+                    p.footer__newsletter__description Our newsletter is packed full of style ideas, new products and exclusive disounts. We are GDPR compliant, your information is secure with us.
+                ul.footer__policy-list
+                    li 
+                        a(href='#') Terms & Conditions
+                    li 
+                        a(href="#") Privacy Policy
+                    li 
+                        a(href="#") Shiping Policy
+                div.footer__payment-methods
+                    img.footer__payment-methods__mc(src="images/Frame177.png" alt="#")
+                    img.footer__payment-methods__visa(src='images/Frame178.png' alt="#")
+                    img.footer__payment-methods__g-pay(src='images/Frame180.png' alt="#")
+                    img.footer__payment-methods__apple-pay(src='images/Frame181.png' alt="#")
+                div.footer__socials
+                    a(href="#")
+                        img.footer__socials__fcb(src="images/001-facebook.png" alt="#")
+                    a(href="#")
+                        img.footer__socials__inst(src='images/004-instagram.png' alt="#")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+        script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="main.js")
+                  

@@ -1,0 +1,147 @@
+doctype html 
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='style.css')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+        title Meridian|Homepage
+        link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    body
+        header
+            div.header-sale
+                p spring season sale | 20% off entire store | Free Premium UK Delivery
+            div.nav-header 
+                div.nav-header__burger 
+                    button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                        span
+                    ul.dropdown-menu
+                        li 
+                            a.dropdwon-item(href="index.html") Home
+                        li 
+                            a.dropdown-item(href="products.html") Products 
+                        li
+                            a.dropdown-item(href="faq.html") FAQ 
+                        li
+                            a.dropdown-item(href="about-us.html") About Us
+                        li 
+                            a.dropdown-item(href="contact-us.html") Contact 
+                nav.nav-header__left 
+                    a(href="index.html") Home 
+                    a(href="products.html") Products 
+                    a(href="faq.html") FAQ
+                    a(href="about-us.html") About Us 
+                    a(href="contact-us.html"  style='color: #00264B') Contact
+                img.nav-header__title(src="/images/Green.png" alt="#")      
+                nav.nav-header__right 
+                    a(href="#") Dealer Login 
+                    a(href="#") Become A Dealer 
+                    a(href="#") Find A Retail 
+                a.nav-header__cart(href="cart.html")
+                    img(src="/images/Cart.png" alt="#") 
+                p.nav-header__count 0
+                button.nav-header__search 
+                    img(src="/images/Group.png" alt="#") 
+        img.contact-us-img(src="images/e442850037f6bf4bfd7620dd715d7842.jpg" alt="#")
+        div.ready-to-help
+            h2 We Ready To Help
+            p.ready-to-help__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
+            div.ready-to-help__phone
+                img(src="images/Icon(2).png" alt="#")
+                h4 PHONE NUMBER
+                p (62) 1829017
+            div.ready-to-help__email
+                img(src="images/Icon.png" alt="#")
+                h4 EMAIL
+                p Hello@studio.co
+            div.ready-to-help__location
+                img(src="images/Icon(1).png" alt="#")
+                h4 MAP STREET
+                P John Bucarest St. 199
+        div.contact-us-data
+            h3 Let’s Talk With Us
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
+            form(action="#")
+                div.form__email
+                    label(for="email") Email
+                    br
+                    input(type="email" id="email" placeholder="Enter your email" style="font-size: 24px;")
+                div.form__name
+                    label(for='name') Name
+                    br
+                    input(type="text" id="name" placeholder="Enter your name" style="font-size: 24px;")
+                div.form__message
+                    label(for="message") Message
+                    br
+                    textarea(id="message" placeholder="Enter your message" style="font-size: 24px;")
+                input(type="submit" value="SEND MESSAGE" id="send-button")
+        div(class='connection contact-us-connection')
+            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+            h4.connection__title How Can We Help You?
+            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+            p.connection__email Get In Touch support@Meridian.com
+            div.connection__phone
+                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+            p.connection__work-time 8am to 6pm, 7 days a week
+        footer
+            div(class='footer contact-us-footer')
+                img.footer__logo(src='images/Green(1).png' alt="#")
+                hr
+                p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]
+                p.footer__phone #[img(src='images/Vector.png' alt="#")] 01789 730695
+                p.footer__email #[img(src='images/Vector(1).png' alt="#")] support@Meridian.com
+                ul.footer__list
+                    li.footer__list__title Product 
+                    li 
+                        a(href='#') New Arrival
+                    li 
+                        a(href='#') Living Room
+                    li
+                        a(href='#') Kitchen & Dining Room
+                    li
+                        a(href='#') Bed Room
+                    li
+                        a(href='#') Accent
+                    li 
+                        a(href='#') Occasional Table
+                    li
+                        a(href='#') Office/Home Office
+                    li
+                        a(href="#") Outdoor Furniture
+                ul(class='footer__list help-list')
+                    li.footer__list__title Help
+                    li
+                        a(href='about-us.html') About Us
+                    li
+                        a(href='contact-us.html') Contact
+                div.footer__newsletter
+                    p.footer__newsletter__join Join Meridian for Exclusive Offers
+                    form
+                        input.footer__newsletter__email(type='email' placeholder="Email address")
+                        input.footer__newsletter__submit(type="submit" value=">")
+                    p.footer__newsletter__description Our newsletter is packed full of style ideas, new products and exclusive disounts. We are GDPR compliant, your information is secure with us.
+                ul.footer__policy-list
+                    li 
+                        a(href='#') Terms & Conditions
+                    li 
+                        a(href="#") Privacy Policy
+                    li 
+                        a(href="#") Shiping Policy
+                div.footer__payment-methods
+                    img.footer__payment-methods__mc(src="images/Frame177.png" alt="#")
+                    img.footer__payment-methods__visa(src='images/Frame178.png' alt="#")
+                    img.footer__payment-methods__g-pay(src='images/Frame180.png' alt="#")
+                    img.footer__payment-methods__apple-pay(src='images/Frame181.png' alt="#")
+                div.footer__socials
+                    a(href="#")
+                        img.footer__socials__fcb(src="images/001-facebook.png" alt="#")
+                    a(href="#")
+                        img.footer__socials__inst(src='images/004-instagram.png' alt="#")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.7.1.min.js")
+        script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="main.js")
+                  
