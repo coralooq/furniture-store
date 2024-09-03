@@ -12,12 +12,16 @@ if(document.body.querySelector(".product-page-description")) {
             slidesToScroll: 2,
             arrows: false,
         });
+
+        if($('.product-page-description h5').text().length > 22) {
+            $('.product-page-description__price').css('top', +$('.product-page-description__price').css('top').slice(0, -2) + 17 + 'px')
+        }
     
     } else if(document.documentElement.clientWidth > 574) {
-        let otherSlider = document.body.querySelector('.product-page-other-sets__slider');
-        otherSlider.classList.remove('multiple-items');
-        let infoSlider = document.body.querySelector('.product-page-slider-info');
-        infoSlider.classList.remove('multiple-items');
+        let otherSlider = $('.product-page-other-sets__slider');
+        otherSlider.removeClass('multiple-items');
+        let infoSlider = $('.product-page-slider-info');
+        infoSlider.removeClass('multiple-items');
     
         $('.single-item').slick({
             arrows: false,
@@ -38,14 +42,14 @@ if(document.body.querySelector(".product-page-description")) {
     
     //                SLIDER INFO
     
-    let sliderInfo = document.body.querySelector('.product-page-slider-info');
+    let sliderInfo = $('.product-page-slider-info');
     
     
-    sliderInfo.addEventListener('click', function(event) {
+    sliderInfo.click(function(event) {
         document.body.querySelectorAll('.product-page-slider-info div input').forEach(input => input.disabled = false);
-        let currentSliderInfo = document.body.querySelector('.product-page-slider-info__active');
-        let currentPage = document.body.querySelector('.product-page-description__active');
-        currentSliderInfo.classList.remove('product-page-slider-info__active');
+        let currentSliderInfo = $('.product-page-slider-info__active');
+        let currentPage = $('.product-page-description__active');
+        currentSliderInfo.removeClass('product-page-slider-info__active');
         event.target.classList.add('product-page-slider-info__active');
         event.target.disabled = true;
 
@@ -58,18 +62,18 @@ if(document.body.querySelector(".product-page-description")) {
             if(!event.target.value.includes(' ')) {
                let regexp = new RegExp(`${event.target.value}`, 'i');
                if(regexp.test(elem)) {
-                let description = document.body.querySelector(`.${elem}`);
-                description.classList.add('product-page-description__active');
-                currentPage.classList.remove('product-page-description__active');
+                let description = $(`.${elem}`);
+                description.addClass('product-page-description__active');
+                currentPage.removeClass('product-page-description__active');
                }
             };
             if(event.target.value.includes(' ')) {
                 correctName = event.target.value.split(' ').slice(1).join('').slice(0, -1);
                 let regexp = new RegExp(`${correctName}`, 'i');
                 if(regexp.test(elem)) {
-                    let description = document.body.querySelector(`.${elem}`);
-                    description.classList.add('product-page-description__active');
-                    currentPage.classList.remove('product-page-description__active');
+                    let description = $(`.${elem}`);
+                    description.addClass('product-page-description__active');
+                    currentPage.removeClass('product-page-description__active');
                 }
             }; 
         }    
@@ -82,33 +86,29 @@ if(document.body.querySelector(".product-page-description")) {
     
     
     if(document.documentElement.clientWidth > 574) {
-            let previousButton = document.body.querySelector('.slick-prev');
-            let nextButton = document.body.querySelector('.slick-next');
-            console.log(previousButton);
-            console.log(nextButton);
+            let previousButton = $('.slick-prev');
+            let nextButton = $('.slick-next');
         
-            nextButton.addEventListener('click', function(event) {
+            nextButton.click(function(event) {
                 let photos = document.body.querySelectorAll('.product-page-little-slider div');
-                let photosSlider = document.body.querySelector('.product-page-photo-slider div:nth-child(2) img');
+                let photosSlider = $('.product-page-photo-slider div:nth-child(2) img');
             
                 for(let photo of photos) {
                     if(photo.getBoundingClientRect().left == 384) {
                         let src = photo.children[0].src.split('3000/').slice(1).join('');
-                        photosSlider.src = src;
+                        photosSlider.attr('src', src);
                     };
                 }
             });
         
-            previousButton.addEventListener('click', function(event) {
+            previousButton.click(function(event) {
                 let photos = document.body.querySelectorAll('.product-page-little-slider div');
-                let photosSlider = document.body.querySelector('.product-page-photo-slider div:nth-child(2) img');
+                let photosSlider = $('.product-page-photo-slider div:nth-child(2) img');
             
                 for(let photo of photos) {
-                    console.log(photo.getBoundingClientRect().left);
-                    console.log(photo);
                     if(photo.getBoundingClientRect().left == 102) {
                         let src = photo.children[0].src.split('3000/').slice(1).join('');        
-                        photosSlider.src = src;
+                        photosSlider.attr('src', src);
                     };
                 }
             });
@@ -119,25 +119,42 @@ if(document.body.querySelector(".product-page-description")) {
     
     //                         ADD TO CART
     
-    let buttonAdd = document.body.querySelector('.product-page-description__add');
+    let buttonAdd = $('.product-page-description__add');
     let itemsId = [];
     
-    buttonAdd.addEventListener('click', function(event) {
-        let itemCount = document.body.querySelector('.nav-header__count');
-        itemCount.innerHTML = 1 + +localStorage.getItem('itemCount');
-        localStorage.setItem('itemCount', `${itemCount.innerHTML}`);
+    buttonAdd.click(function(event) {
+        let itemCount = $('.nav-header__count');
+        itemCount.text(1 + +localStorage.getItem('itemCount'));
+        localStorage.setItem('itemCount', `${itemCount.text()}`);
         let parent = event.target.parentNode.id;
-        let currentName = document.querySelector(`#${parent} h5`).innerHTML;
-        let currentPrice = document.querySelector(`#${parent} .product-page-description__price`).innerHTML.split(' ').splice(0, 1).join('');
-        let currentImg = document.querySelector(`#${parent}-img div:nth-child(2) img`).src.split('3000/').slice(1).join('');
+        let currentName = $(`#${parent} h5`).text();
+        let currentPrice = $(`#${parent} .product-page-description__price`).text().split(' ').splice(0, 1).join('');
+        console.log($(`#${parent}-img div:nth-child(2) img`).attr('src'));
+        let currentImg = $(`.main-image`).attr('src');
     
         
         itemsId.push(`${parent}.`);
         if(localStorage.getItem('idList')) {
             if(localStorage.getItem('idList').includes(`${parent}`)) {
-                alert('item was adeed');
-                itemCount.innerHTML = +localStorage.getItem('itemCount') - 1;
-                localStorage.setItem('itemCount', `${itemCount.innerHTML}`);
+                $('.already-added-container').css('top', +String(document.body.getBoundingClientRect().top).slice(1) + 750 + 'px' );
+                $('.already-added-container').css('display', 'block');
+                $('.already-added-container button').click(function(event) {
+                    $('.already-added-container').css('display', 'none');
+                });
+
+                let lastScroll = window.pageYOffset;
+                $(window).scroll(function(event) {
+                    if(window.pageYOffset > lastScroll) {
+                        $('.already-added-container').css('top',  window.pageYOffset  + 750 + 'px');
+                        lastScroll = window.pageYOffset;
+                    } else {
+                        $('.already-added-container').css('top',  window.pageYOffset  + 750 + 'px');
+                        lastScroll = window.pageYOffset;
+                    } 
+                    
+                })
+                itemCount.text(+localStorage.getItem('itemCount') - 1);
+                localStorage.setItem('itemCount', `${itemCount.text()}`);
                 return;
             };
             itemsIdStr =  localStorage.getItem('idList') + itemsId.join('.');
@@ -156,10 +173,66 @@ if(document.body.querySelector(".product-page-description")) {
         localStorage.setItem(`${parent}`, JSON.stringify(objItem));
         localStorage.setItem('idList', itemsIdStr);
     
-    });    
+    });  
 
-    if(localStorage.getItem('itemCount')) {
-        let itemsCount = document.body.querySelector('.nav-header__count');
-        itemsCount.innerHTML = localStorage.getItem('itemCount');
-    }
+
+    //   CHOOSE PAGE
+    $('.products-page-previous').attr('disabled', true);
+    $('.product-page-nav').click(function(event) {
+        if($(event.target.classList)[1] == 'products-page-next') {
+            let arrs = [$('.product-page-reviews__one__active'), $('.product-page-reviews__two__active'), $('.product-page-reviews__three__active'), $('.product-page-reviews__four__active'), $('.product-page-reviews__five__active')];
+            for(let arr of arrs ) {
+                $(arr[0]).removeClass($(arr[0]).attr('class').split(' ')[2])
+            };
+            let activeNumber = +$(arrs[0][0].classList)[1].match(/[\d]+/g).join('') + 1;
+            let pages = document.querySelectorAll(`.page-${activeNumber}`);
+            $('.active-page').removeClass('active-page');
+            $(`.products-page-${activeNumber}`).addClass('active-page');
+            for(let page of pages) {
+                let arr = $(page).attr('class').split(' ');
+                $(page).addClass(arr[0] + '__active')
+            };
+            if(activeNumber == +$('.page-link').eq(-2).attr('class').match(/\d+/g).join('')) {
+                $('.products-page-next').attr('disabled', true);
+            }  
+        } else if($(event.target.classList)[1] == 'products-page-previous') {
+            let arrs = [$('.product-page-reviews__one__active'), $('.product-page-reviews__two__active'), $('.product-page-reviews__three__active'), $('.product-page-reviews__four__active'), $('.product-page-reviews__five__active')];
+            for(let arr of arrs ) {
+                $(arr[0]).removeClass($(arr[0]).attr('class').split(' ')[2])
+            };
+            let activeNumber = +$(arrs[0][0].classList)[1].match(/[\d]+/g).join('') - 1;
+            let pages = document.querySelectorAll(`.page-${activeNumber}`);
+            $('.active-page').removeClass('active-page');
+            $(`.products-page-${activeNumber}`).addClass('active-page');
+            for(let page of pages) {
+                let arr = $(page).attr('class').split(' ');
+                $(page).addClass(arr[0] + '__active')
+            }
+            if($('.page-1').attr('class').includes('product-page-reviews__one__active')) {
+                $('.products-page-previous').attr('disabled', true);
+            };
+            if($('.active-page').attr('class').split(' ')[1].match(/\d+/g).join('') != $('.page-link').eq(-2).attr('class').match(/\d+/g).join('')) {
+                $('.products-page-next').attr('disabled', false);
+            }
+        } else {
+            let neededPage = "page-" + $(event.target).attr('class').match(/[\d]+/g).join('');
+            let pages = document.body.querySelectorAll(`.${neededPage}`);
+            let arrs = [$('.product-page-reviews__one__active'), $('.product-page-reviews__two__active'), $('.product-page-reviews__three__active'), $('.product-page-reviews__four__active'), $('.product-page-reviews__five__active')];
+            $('.active-page').removeClass('active-page');
+            $(event.target).addClass('active-page');
+            for(let arr of arrs ) {
+                $(arr[0]).removeClass($(arr[0]).attr('class').split(' ')[2])
+            }
+            for(let page of pages) {
+                let arr = $(page).attr('class').split(' ');
+                $(page).addClass(arr[0] + '__active');
+            }
+            if($(event.target).attr('class').match(/[\d]+/g).join('') != $('.page-link').eq(-2).attr('class').match(/\d+/g).join('')) {
+                $('.products-page-next').attr('disabled', false)
+            } else $('.products-page-next').attr('disabled', true);
+            if($(event.target).attr('class').match(/[\d]+/g).join('') == '1') $('.products-page-previous').attr('disabled', true)
+        };
+        if(!$('.page-1').attr('class').includes('product-page-reviews__one__active')) $('.products-page-previous').attr('disabled', false);
+        
+    })
 };

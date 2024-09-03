@@ -1,6 +1,6 @@
 if(document.body.querySelector(".reviews")) {
     let count = 0;
-    let buttons = document.querySelector('.reviews');
+    console.log(localStorage);
 
     $(document).ready(function() {
         $('.reviews').click(function(event) {
@@ -8,11 +8,11 @@ if(document.body.querySelector(".reviews")) {
                 let oldCount = count;
                 count--;
                 if(count < 0) count = 9;
-                let currentReview = document.querySelector(`.review-${count}`);
-                let lastReview = document.querySelector(`.review-${oldCount}`);
+                let currentReview = $(`.review-${count}`);
+                let lastReview = $(`.review-${oldCount}`);
                 $(`.review-${oldCount}`).animate({opacity: 'hide'}, 'slow');
-                setTimeout(() =>  lastReview.classList.add('invis') , 100);
-                setTimeout(() =>  currentReview.classList.remove('invis') ,100);
+                setTimeout(() =>  lastReview.addClass('invis') , 100);
+                setTimeout(() =>  currentReview.removeClass('invis') ,100);
                 $(`.review-${count}`).animate({opacity: 'show'}, 'slow');
 
             
@@ -21,11 +21,11 @@ if(document.body.querySelector(".reviews")) {
                 let oldCount = count;
                 count++;
                 if(count > 9) count = 0;
-                let currentReview = document.querySelector(`.review-${count}`);
-                let lastReview = document.querySelector(`.review-${oldCount}`);
+                let currentReview = $(`.review-${count}`);
+                let lastReview = $(`.review-${oldCount}`);
                 $(`.review-${oldCount}`).animate({opacity: 'hide'}, 'slow');
-                setTimeout(() => lastReview.classList.add('invis'), 100);
-                setTimeout(() => currentReview.classList.remove('invis'), 100);
+                setTimeout(() => lastReview.addClass('invis'), 100);
+                setTimeout(() => currentReview.removeClass('invis'), 100);
                 $(`.review-${count}`).animate({opacity: 'show'}, 'slow');
                 
                 
@@ -39,12 +39,12 @@ if(document.body.querySelector(".reviews")) {
     // SLICK SLIDER
 
     function calcScroll() {
-        let div = document.createElement('div');
+        let div = $('<div></div>');
 
-        div.style.width = '50px';
-        div.style.height = '50px';
-        div.style.overflowY = 'scroll';
-        div.style.visibility = 'hidden';
+        div.css('width', '50px');
+        div.css('height', '50px');
+        div.css('overflowY', 'scroll');
+        div.css('visibility', 'hidden');
 
         document.body.appendChild(div);
         let scrollWidth = div.offsetWidth - div.clientWidth;
@@ -64,21 +64,17 @@ if(document.body.querySelector(".reviews")) {
         });
     };
 
-
-
-
-
-    console.log(document.title);
-
-    if(localStorage.getItem('itemCount')) {
-        let itemsCount = document.body.querySelector('.nav-header__count');
-        itemsCount.innerHTML = localStorage.getItem('itemCount');
-    }
-
-
 };
 
+function sortWords(str) {
+    let arr = str.split(' ');
+    let newArr = [];
+    for(let elem of arr) {
+        let number = +elem.match(/\d+/).join('');
+        newArr.splice(number-arr.length, 0, elem);
+    }
+    return newArr.join(' ');
+  };
+  
+  console.log(sortWords('T4est 3a Thi1s is2'));
 
-
-
-     

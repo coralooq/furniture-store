@@ -1,3 +1,6 @@
+body
+    overflow-x: hidden
+
 hr 
     display: none
 
@@ -22,6 +25,9 @@ hr
         background-color: #000000 !important
         opacity: 1
 
+.main-image
+    display: none
+
 
 .product-page-little-slider
     display: none !important
@@ -40,9 +46,9 @@ hr
         font-family: "Outfit", sans-serif
         font-size: 35px
         font-weight: 300
-        line-height: 56px
         text-align: left
         color: #888887
+        margin: 0
     &__price
         position: absolute
         width: 352px
@@ -72,7 +78,6 @@ hr
             font-size: 17.71px
             font-weight: 400
             line-height: 27.25px
-            text-align: justified
             color: #A9A9A9
     &__finance
         position: absolute
@@ -126,6 +131,32 @@ hr
     & img
         position: relative
         top: -2px
+
+.already-added-container
+        display: none
+        position: absolute
+        left: 80px
+        width: 340px
+        height: 100px
+        border: 1px solid #B58269
+        background: #FFFFFF
+        opacity: 0.8
+        transition: 0.1s
+        z-index: 99999
+        & p 
+            position: absolute
+            top: 42px
+            left: 10px
+            font-family: "Outfit", sans-serif
+            font-size: 25px
+        & button
+            position: absolute
+            top: 15px
+            left: 295px
+            width: 25px
+            height: 25px
+            font-size: 23px
+            background: url(images/ic-close.png)
 
 .product-page__img-1,
 .product-page__img-2,
@@ -365,7 +396,7 @@ hr
         width: 200px
         height: 25px
         top: 0px
-        left: 3x
+        left: 3px
         font-family: "Outfit", sans-serif
         font-size: 20px
         font-weight: 400
@@ -465,7 +496,6 @@ hr
         display: block
     .link-line
         width: 500px !important
-
     .product-page-photo-slider
         display: none
         position: absolute
@@ -557,6 +587,32 @@ hr
     .product-page__img-4
         top: 795px
         left: 1602px
+    
+    .already-added-container
+        display: none
+        position: absolute
+        left: 1430px
+        width: 400px
+        height: 150px
+        border: 1px solid #B58269
+        background: #FFFFFF
+        opacity: 0.8
+        transition: 0.1s
+        z-index: 99999
+        & p 
+            position: absolute
+            top: 55px
+            left: 20px
+            font-family: "Outfit", sans-serif
+            font-size: 28px
+        & button
+            position: absolute
+            top: 15px
+            left: 355px
+            width: 25px
+            height: 25px
+            font-size: 23px
+            background: url(images/ic-close.png)
     
     .product-page-uk-delivery
         width: 659px
@@ -829,15 +885,30 @@ hr
             line-height: 36px
             text-align: left
         &__one
+            display: none
             top: 132px
+            &__active
+                display: block
         &__two
+            display: none
             top: 389px
+            &__active
+                display: block
         &__three
+            display: none
             top: 649px
+            &__active
+                display: block
         &__four
+            display: none
             top: 908px
+            &__active
+                display: block
         &__five
+            display: none
             top: 1167px
+            &__active
+                display: block
 
     .product-page-nav
         left: 708px !important

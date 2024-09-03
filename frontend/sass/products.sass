@@ -1,4 +1,7 @@
 // PRODUCTS STYLE
+body
+    overflow-x: hidden
+
 
 .link-line
     display: none
@@ -91,28 +94,35 @@
     font-weight: 400
     line-height: 19.54px
     letter-spacing: 0.03em
-    &__container
-        border-radius: 3px
+    &__btn
+        display: block
         position: absolute
-        width: 84px
-        height: 24px
+        top: -5px
+        left: 0px
+        width: 100px
+        height: 30px
+        border: none
         overflow: hidden
         z-index: 999
+        opacity: 0
         &__locker
             height: 24px
         &__current-sort
             display: none
         &__line
             display: none
-        &__btn-recent
-            position: absolute
-            top: 35px
-            width: 84px
-        &__btn-remote
-            position: absolute
-            top: 80px
-            width: 84px
-    
+    &__btn-recent
+        position: absolute
+        top: 0px
+        width: 96px
+        height: 45px
+        background: none
+    &__btn-remote
+        position: absolute
+        top: 50px
+        width: 96px
+        height: 45px
+        background: none
     &__text
         width: 52px
         height: 20px
@@ -122,7 +132,26 @@
         line-height: 19.54px
         letter-spacing: 0.03em
         text-align: left
-        margin-bottom: 0px
+    &__btn__text
+        width: 80px
+        height: 40px
+        font-family: "Hanken Grotesk", sans-serif
+        font-size: 15px
+        font-weight: 400
+        line-height: 19.54px
+        letter-spacing: 0.03em
+        text-align: center
+        margin: 0px
+    &__menu
+        position: absolute
+        left: 0px
+        top: 30px
+        display: block
+        width: 100px
+        height: 95px
+        border: 1px solid #E3E3E3
+        overflow: hidden
+        z-index: 9999
     &:after
         position: absolute
         top: -5px
@@ -132,8 +161,6 @@
         width: 24px
         height: 24px
         background: url(images/down.jpg)
-    &__btn
-        display: none
 
 .div-blocker
         position: absolute
@@ -149,7 +176,7 @@
     display: none
     position: absolute
     width: 300px
-    height: 1135px
+    height: 730px
     top: 370px
     left: 70px
     z-index: 999
@@ -406,23 +433,18 @@
         height: 27px
         top: 250px
         left: 100px
-        gap: 8.67px
-        opacity: 0px
         font-family: "Hanken Grotesk", sans-serif
         font-size: 18px
         font-weight: 400
         line-height: 27px
         letter-spacing: 0.015em
         text-align: left
-        & a[href='index.html']
+        & a
             padding-right: 9px
             text-decoration: none
             color: #BEBFBE
             &:hover
                 color: black
-        & a[href='products.html']
-            padding-left: 9px
-            text-decoration: none
 
     .products-sale
         position: absolute
@@ -506,7 +528,7 @@
     .products-sort-line
         display: none
     .sort-by
-        display: flex
+        display: block
         position: absolute
         width: 439.06px
         height: 73.42px
@@ -523,82 +545,65 @@
             font-weight: 400
             line-height: 32.57px
             letter-spacing: 0
-        &__container
+        &__btn
             position: absolute
             left: 114.55px
             display: block
             width: 325px
             height: 74px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 25px
+            font-weight: 400
+            line-height: 32.57px
+            letter-spacing: 0
+            border: 1px solid #E3E3E3
+            background: #FFFFFF
+            opacity: 1
+            overflow: hidden
+            z-index: 9999
+        &__menu
+            position: absolute
+            left: 115px
+            top: 74px
+            display: block
+            width: 325px
+            height: 95px
             border: 1px solid #E3E3E3
             overflow: hidden
-            &__current-sort
-                display: block
+            z-index: 9999
+        &__btn-recent 
+            position: absolute
+            top: 0px
+            display: block
+            width: 325px
+            position: absolute
+            height: 40px
+            z-index: 998
+            & p
                 position: absolute
-                top: 21px
-                left: 25px
-                width: 325px
-                height: 74.21px
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 25px
-                font-weight: 400
-                line-height: 32.57px
-                letter-spacing: 0
-                z-index: 99
-                & img
-                    margin-left: 115px
-            &__line
-                position: relative
-                top: 56px
-                z-index: 9999
-
-            &__locker
-                display: block
+                top: 10px
+                left: 24.73px
+        &__btn-remote
+            display: block
+            position: absolute
+            top: 47px
+            left: 0px
+            width: 324px
+            height: 40px
+            z-index: 998
+            & p
                 position: absolute
-                width: 325px
-                height: 74.21px
-                background-color: black
-                opacity: 0
-                z-index: 999
-            & button
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 25px
-                font-weight: 400
-                line-height: 32.57px
-                letter-spacing: 0
-            &__btn-recent 
-                position: absolute
-                top: 70px
-                display: block
-                width: 325px
-                position: absolute
-                height: 50px
-                z-index: 998
-                & p
-                    position: absolute
-                    top: 10px
-                    left: 24.73px
-                & img
-                    position: relative
-                    top: 0px
-                    left: 0px
-                    padding: 9.28px 15.15px 8.25px 5.15px
-            &__btn-remote
-                display: block
-                position: absolute
-                top: 120px
-                left: 0px
-                width: 324px
-                height: 50px
-                font-family: "Hanken Grotesk", sans-serif
-                font-size: 25px
-                font-weight: 400
-                line-height: 32.57px
-                letter-spacing: 0
-                z-index: 998
-                & p
-                    position: absolute
-                    top: 10px
-                    left: 24.73px
+                top: 10px
+                left: 24.73px
+        &__btn__text
+            width: 321px
+            height: 41px
+            font-family: "Hanken Grotesk", sans-serif
+            font-size: 25px
+            font-weight: 400
+            line-height: 32.57px
+            letter-spacing: 0
+            text-align: left
 
 
         &:after
@@ -612,7 +617,7 @@
         width: 1920px
         background: #FFFFFF
         opacity: 0
-        z-index: 99
+        z-index: 999
 
     .category-list
         display: block
