@@ -12,9 +12,9 @@ html(lang='en')
         link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
     body
         header
-            div.header-sale
+            section.header-sale
                 p spring season sale | 20% off entire store | Free Premium UK Delivery
-            div.nav-header 
+            section.nav-header 
                 div.nav-header__burger 
                     button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
                         span
@@ -45,49 +45,50 @@ html(lang='en')
                 p.nav-header__count 0
                 button.nav-header__search 
                     img(src="/images/Group.png" alt="#") 
-        img.contact-us-img(src="images/e442850037f6bf4bfd7620dd715d7842.jpg" alt="#")
-        div.ready-to-help
-            h2 We Ready To Help
-            p.ready-to-help__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
-            div.ready-to-help__phone
-                img(src="images/Icon-phone.png" alt="#")
-                h4 PHONE NUMBER
-                p (62) 1829017
-            div.ready-to-help__email
-                img(src="images/Icon.png" alt="#")
-                h4 EMAIL
-                p Hello@studio.co
-            div.ready-to-help__location
-                img(src="images/Icon-location.png" alt="#")
-                h4 MAP STREET
-                P John Bucarest St. 199
-        div.contact-us-data
-            h3 Let’s Talk With Us
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
-            form(action="#")
-                div.form__email
-                    label(for="email") Email
-                    br
-                    input(type="email" id="email" placeholder="Enter your email" style="font-size: 24px;")
-                div.form__name
-                    label(for='name') Name
-                    br
-                    input(type="text" id="name" placeholder="Enter your name" style="font-size: 24px;")
-                div.form__message
-                    label(for="message") Message
-                    br
-                    textarea(id="message" placeholder="Enter your message" style="font-size: 24px;")
-                input(type="submit" value="SEND MESSAGE" id="send-button")
-        div(class='connection contact-us-connection')
-            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
-            h4.connection__title How Can We Help You?
-            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
-            p.connection__email Get In Touch support@Meridian.com
-            div.connection__phone
-                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
-            p.connection__work-time 8am to 6pm, 7 days a week
+        main
+            img.contact-us-img(src="images/e442850037f6bf4bfd7620dd715d7842.jpg" alt="#")
+            section.ready-to-help
+                h2 We Ready To Help
+                p.ready-to-help__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
+                div.ready-to-help__phone
+                    img(src="images/Icon-phone.png" alt="#")
+                    h4 PHONE NUMBER
+                    p (62) 1829017
+                div.ready-to-help__email
+                    img(src="images/Icon.png" alt="#")
+                    h4 EMAIL
+                    p Hello@studio.co
+                div.ready-to-help__location
+                    img(src="images/Icon-location.png" alt="#")
+                    h4 MAP STREET
+                    P John Bucarest St. 199
+            section.contact-us-data
+                h3 Let’s Talk With Us
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nulla a ut diam et, sapien dis
+                form(action="#")
+                    div.form__email
+                        label(for="email") Email
+                        br
+                        input(type="email" id="email" placeholder="Enter your email" style="font-size: 24px;")
+                    div.form__name
+                        label(for='name') Name
+                        br
+                        input(type="text" id="name" placeholder="Enter your name" style="font-size: 24px;")
+                    div.form__message
+                        label(for="message") Message
+                        br
+                        textarea(id="message" placeholder="Enter your message" style="font-size: 24px;")
+                    input(type="submit" value="SEND MESSAGE" id="send-button")
+            section(class='connection contact-us-connection')
+                img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+                h4.connection__title How Can We Help You?
+                p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+                p.connection__email Get In Touch support@Meridian.com
+                div.connection__phone
+                    div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+                p.connection__work-time 8am to 6pm, 7 days a week
         footer
-            div(class='footer contact-us-footer')
+            section(class='footer contact-us-footer')
                 img.footer__logo(src='images/Logo.png' alt="#")
                 hr
                 p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]

@@ -14,9 +14,9 @@ html(lang='en')
         
     body
         header
-            div.header-sale
+            section.header-sale
                 p spring season sale | 20% off entire store | Free Premium UK Delivery
-            div.nav-header 
+            section.nav-header 
                 div.nav-header__burger 
                     button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
                         span
@@ -46,140 +46,141 @@ html(lang='en')
                     img(src="/images/Cart.png" alt="#") 
                 p.nav-header__count 0
                 button.nav-header__search 
-                    img(src="/images/Group.png" alt="#") 
-        hr
-        p.link-line #[a(href="index.html") HOME]/#[a(href="products.html") PRODUCTS]/#[a(style="color: black" href="product-page-1.html") ALMA BLACK ARMLESS]
-        mixin photoSlider(images)
-            for image in images
-                div
-                    img(src=image alt="#")
-        img.main-image(src="images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg" alt="#")
-        div(class="product-page-photo-slider single-item" id="ABA-img")
-            +photoSlider(["images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg"])
-        div(class="product-page-little-slider multiple-items")
-            +photoSlider(["images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg"])
-        div.product-page-description(id="ABA")
-            h5 Alma Black Armless
-            p.product-page-description__price £1,000.00 #[span £2,500.00 40% Off]
-            p.product-page-description__grade 
-                - var n = 0;
-                while n < 5
-                    img(src="images/ant-design_star-filled.png" alt="#")
-                    - n++
-                span 5.00
-            div.product-page-description__finance
-                img(src="images/product-page/succes-icon.png" alt="#")
-                p.product-page-description__finance__first-p #[span Finance Available] | Affordable Payments #[br] Up to 36 months.
-            button.product-page-description__add ADD TO CART
-        h4.product-page-guaranteed Guaranteed Safe Checkout
-            img(src="images/product-page/bxs_lock-alt.png" alt="#")
-        div.already-added-container
-            p This item is already added.
-            button
-        img.product-page__img-1(src="images/Frame177.png" alt="#")
-        img.product-page__img-2(src="images/Frame178.png" alt="#")
-        img.product-page__img-3(src="images/Frame180.png" alt="#")
-        img.product-page__img-4(src="images/Frame181.png" alt="#")
-        div.product-page-uk-delivery
-            img(src="images/product-page/carbon_delivery.png" alt="#")
-            p.product-page-uk-delivery__p-1 FREE UK DELIVERY
-            p.product-page-uk-delivery__p-2 Order now and enjoy free delivery on us! Restrictions apply.
-        mixin sliderInfo(buttonClass, value)
-            div 
-                input(type="button" class=buttonClass value=value)
-        div(class="product-page-slider-info multiple-items")
-            +sliderInfo("product-page-slider-info__included", "What's Included?")
-            +sliderInfo("product-page-slider-info__delivery product-page-slider-info__active", "Delivery")
-            +sliderInfo("product-page-slider-info__dimensions", "Dimensions")
-            +sliderInfo("product-page-slider-info__finance", "Finance")
-        mixin description(blockClass, name, text)
-            div(class=blockClass)
-                h5=name 
-                p=text 
-        +description("product-page-description-included", "Included", "Sit amet, consectetur adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.") 
-        +description("product-page-description-delivery product-page-description__active", "Premium Delivery", " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
-        +description("product-page-description-dimensions", "Dimensions", "Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
-        +description("product-page-description-finance", "Finance", "Adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
-        img.product-page-img( src="images/product-page/288ae07cf121f9fee90c0009bfb21cd1.jpg" alt="#")
-        div.product-page-cast
-            h3 Cast Aluminium Furniture
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat convallis semper tortor, ipsum aliquam sit. Ut cras volutpat suscipit elementum dolor at vitae. Elementum hac fringilla sed enim natoque aliquam gravida orci commodo. Duis eget non mattis quis ipsum. Dolor mattis tristique enim netus viverra purus. Id enim leo, vitae egestas sit eget id enim. Dapibus placerat ante ornare nisl. Sit augue nunc felis, accumsan diam fusce. Fringilla vulputate orci aliquet interdum blandit et faucibus et.
-        mixin faqAccordion(dataBsTarget, ariaExpanded, ariaControls, question, id, answer)
-            div.accordion-item
-            h2.accordion-header
-                button(class='accordion-button collapsed' type="button" data-bs-toggle="collapse" data-bs-target=dataBsTarget aria-expanded=ariaExpanded aria-controls=ariaControls) #{question}
-            div(id=id class="accordion-collapse collapse" data-bs-parent="#accordion")
-                div.accordion-body  #{answer}
-        div.product-page-faq
-            h3 Frequently Ask Questions
-            div(class=" accordion accordion-flush" id="accordion")
-                +faqAccordion("#flush-collapseOne", "false", "flush-collapseOne", "Can I return my furniture?", "flush-collapseOne", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseTwo", "false", "flush-collapseTwo", "Can your furniture be left outside?", "flush-collapseTwo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseThree", "false", "flush-collapseThree", "What does powder coated mean?", "flush-collapseThree", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseFour", "false", "flush-collapseFour", "What is thermosetting polymer?", "flush-collapseFour", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseFive", "false", "flush-collapseFive", "Are your cushions machine washable?", "flush-collapseFive", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseSix", "false", "flush-collapseSix", "Do the products fade in sunlight?", "flush-collapseSix", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.ringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseSeven", "false", "flush-collapseSeven", "How do I care for my furniture?", "flush-collapseSeven", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseEight", "false", "flush-collapseEight", "Is the furniture flat packed or fully assembled?", "flush-collapseEight", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-                +faqAccordion("#flush-collapseNine", "false", "flush-collapseNine", "When can I expect my item to be delivered?", "flush-collapseNine", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
-        mixin otherSets(productClasses, img, catalogClass, catalogName, priceClass, price, href)
-            div(class=productClasses)
-                img(src=img alt="#")
-                p(class=catalogClass)=catalogName 
-                p(class=priceClass)=price
-                a(href=href) View Details Products
-        div.product-page-other-sets
-            h2 Shop Our Other Popular Sets
-            div(class="product-page-other-sets__slider catalog__list multiple-items")
-                +otherSets("catalog__list__first product-page-other-sets__slider__first-item", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "catalog__list__first__item-name", "Alma Black Armless", "catalog__list__first__price", "£1,000.00", "product-page-2.html")
-                +otherSets("catalog__list__second product-page-other-sets__slider__second-item", "images/product-page/3890d21c6cdc7a4bf462bc86ff91575c.jpg", "catalog__list__second__item-name", "Alma Velvet Armless", "catalog__list__second__price", "£1,500.00", "product-page-1.html")
-                +otherSets("catalog__list__three product-page-other-sets__slider__three-item", "images/7d7d4b82a531be0f1914fd001832ab34.jpg", "catalog__list__three__item-name", "Alma White Sofa", "catalog__list__three__price", "£2,500.00", "product-page-4.html")
-                +otherSets("catalog__list__four product-page-other-sets__slider__four-item", "images/a798eab4708ba9edc0282582609cd22c.jpg", "catalog__list__four__item-name", "Emerald Sofa", "catalog__list__four__price", "£3,000.00", "product-page-3.html")
-        mixin reviews(reviewClass, name, grade, date, title, text)
-            div(class=reviewClass)
-                p.product-page-reviews__name=name 
-                p.product-page-reviews__grade
+                    img(src="/images/Group.png" alt="#")
+        main
+            hr
+            p.link-line #[a(href="index.html") HOME]/#[a(href="products.html") PRODUCTS]/#[a(style="color: black" href="product-page-1.html") ALMA BLACK ARMLESS]
+            mixin photoSlider(images)
+                for image in images
+                    div
+                        img(src=image alt="#")
+            img.main-image(src="images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg" alt="#")
+            section(class="product-page-photo-slider single-item" id="ABA-img")
+                +photoSlider(["images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg"])
+            section(class="product-page-little-slider multiple-items")
+                +photoSlider(["images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg"])
+            section.product-page-description(id="ABA")
+                h5 Alma Black Armless
+                p.product-page-description__price £1,000.00 #[span £2,500.00 40% Off]
+                p.product-page-description__grade 
                     - var n = 0;
                     while n < 5
-                        img(src=grade alt="#")
+                        img(src="images/ant-design_star-filled.png" alt="#")
                         - n++
-                p.product-page-reviews__date=date 
-                p.product-page-reviews__title=title 
-                p.product-page-reviews__text=text 
-        div.product-page-reviews
-            h3 Reviews(10)
-            +reviews("product-page-reviews__one page-1 product-page-reviews__one__active", "Darrell Steward", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__two page-1 product-page-reviews__two__active", "Amanda Spencer", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Recommended For You!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__three page-1 product-page-reviews__three__active", "Albert Flores", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Awesome Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__four page-1 product-page-reviews__four__active", "Cameron Williamson", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__five page-1 product-page-reviews__five__active", "Leslie Alexander", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "This is so Satisfying!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                    span 5.00
+                div.product-page-description__finance
+                    img(src="images/product-page/succes-icon.png" alt="#")
+                    p.product-page-description__finance__first-p #[span Finance Available] | Affordable Payments #[br] Up to 36 months.
+                button.product-page-description__add ADD TO CART
+            h4.product-page-guaranteed Guaranteed Safe Checkout
+                img(src="images/product-page/bxs_lock-alt.png" alt="#")
+            section.already-added-container
+                p This item is already added.
+                button
+            img.product-page__img-1(src="images/Frame177.png" alt="#")
+            img.product-page__img-2(src="images/Frame178.png" alt="#")
+            img.product-page__img-3(src="images/Frame180.png" alt="#")
+            img.product-page__img-4(src="images/Frame181.png" alt="#")
+            section.product-page-uk-delivery
+                img(src="images/product-page/carbon_delivery.png" alt="#")
+                p.product-page-uk-delivery__p-1 FREE UK DELIVERY
+                p.product-page-uk-delivery__p-2 Order now and enjoy free delivery on us! Restrictions apply.
+            mixin sliderInfo(buttonClass, value)
+                div 
+                    input(type="button" class=buttonClass value=value)
+            section(class="product-page-slider-info multiple-items")
+                +sliderInfo("product-page-slider-info__included", "What's Included?")
+                +sliderInfo("product-page-slider-info__delivery product-page-slider-info__active", "Delivery")
+                +sliderInfo("product-page-slider-info__dimensions", "Dimensions")
+                +sliderInfo("product-page-slider-info__finance", "Finance")
+            mixin description(blockClass, name, text)
+                div(class=blockClass)
+                    h5=name 
+                    p=text 
+            +description("product-page-description-included", "Included", "Sit amet, consectetur adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.") 
+            +description("product-page-description-delivery product-page-description__active", "Premium Delivery", " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
+            +description("product-page-description-dimensions", "Dimensions", "Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
+            +description("product-page-description-finance", "Finance", "Adipiscing elit. Nam amet justo mi pharetra, consectetur facilisis. Velit est proin orci tristique nunc varius. Id consectetur nibh at aliquet habitant proin volutpat adipiscing nisl. Facilisi donec tellus aliquet sed at non amet, massa.")
+            img.product-page-img( src="images/product-page/288ae07cf121f9fee90c0009bfb21cd1.jpg" alt="#")
+            section.product-page-cast
+                h3 Cast Aluminium Furniture
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat convallis semper tortor, ipsum aliquam sit. Ut cras volutpat suscipit elementum dolor at vitae. Elementum hac fringilla sed enim natoque aliquam gravida orci commodo. Duis eget non mattis quis ipsum. Dolor mattis tristique enim netus viverra purus. Id enim leo, vitae egestas sit eget id enim. Dapibus placerat ante ornare nisl. Sit augue nunc felis, accumsan diam fusce. Fringilla vulputate orci aliquet interdum blandit et faucibus et.
+            mixin faqAccordion(dataBsTarget, ariaExpanded, ariaControls, question, id, answer)
+                div.accordion-item
+                h2.accordion-header
+                    button(class='accordion-button collapsed' type="button" data-bs-toggle="collapse" data-bs-target=dataBsTarget aria-expanded=ariaExpanded aria-controls=ariaControls) #{question}
+                div(id=id class="accordion-collapse collapse" data-bs-parent="#accordion")
+                    div.accordion-body  #{answer}
+            section.product-page-faq
+                h3 Frequently Ask Questions
+                div(class=" accordion accordion-flush" id="accordion")
+                    +faqAccordion("#flush-collapseOne", "false", "flush-collapseOne", "Can I return my furniture?", "flush-collapseOne", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseTwo", "false", "flush-collapseTwo", "Can your furniture be left outside?", "flush-collapseTwo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseThree", "false", "flush-collapseThree", "What does powder coated mean?", "flush-collapseThree", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseFour", "false", "flush-collapseFour", "What is thermosetting polymer?", "flush-collapseFour", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseFive", "false", "flush-collapseFive", "Are your cushions machine washable?", "flush-collapseFive", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseSix", "false", "flush-collapseSix", "Do the products fade in sunlight?", "flush-collapseSix", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.ringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseSeven", "false", "flush-collapseSeven", "How do I care for my furniture?", "flush-collapseSeven", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseEight", "false", "flush-collapseEight", "Is the furniture flat packed or fully assembled?", "flush-collapseEight", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+                    +faqAccordion("#flush-collapseNine", "false", "flush-collapseNine", "When can I expect my item to be delivered?", "flush-collapseNine", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus purus elit, metus dui eu malesuada at. Fringilla in id commodo dui cursus. Elit ac eget pulvinar laoreet. Ullamcorper eu ullamcorper et proin. Tortor dui, senectus malesuada varius morbi non. Suspendisse amet, neque eget purus nunc. Nec vestibulum eget cras hendrerit lorem lorem vitae.Fringilla blandit tempus tellus urna. Sagittis aliquam hendrerit mattis adipiscing neque lectus.")
+            mixin otherSets(productClasses, img, catalogClass, catalogName, priceClass, price, href)
+                div(class=productClasses)
+                    img(src=img alt="#")
+                    p(class=catalogClass)=catalogName 
+                    p(class=priceClass)=price
+                    a(href=href) View Details Products
+            section.product-page-other-sets
+                h2 Shop Our Other Popular Sets
+                div(class="product-page-other-sets__slider catalog__list multiple-items")
+                    +otherSets("catalog__list__first product-page-other-sets__slider__first-item", "images/product-page/19961fdd7045c5cc12addf25c3b4662a.jpg", "catalog__list__first__item-name", "Alma Black Armless", "catalog__list__first__price", "£1,000.00", "product-page-2.html")
+                    +otherSets("catalog__list__second product-page-other-sets__slider__second-item", "images/product-page/3890d21c6cdc7a4bf462bc86ff91575c.jpg", "catalog__list__second__item-name", "Alma Velvet Armless", "catalog__list__second__price", "£1,500.00", "product-page-1.html")
+                    +otherSets("catalog__list__three product-page-other-sets__slider__three-item", "images/7d7d4b82a531be0f1914fd001832ab34.jpg", "catalog__list__three__item-name", "Alma White Sofa", "catalog__list__three__price", "£2,500.00", "product-page-4.html")
+                    +otherSets("catalog__list__four product-page-other-sets__slider__four-item", "images/a798eab4708ba9edc0282582609cd22c.jpg", "catalog__list__four__item-name", "Emerald Sofa", "catalog__list__four__price", "£3,000.00", "product-page-3.html")
+            mixin reviews(reviewClass, name, grade, date, title, text)
+                div(class=reviewClass)
+                    p.product-page-reviews__name=name 
+                    p.product-page-reviews__grade
+                        - var n = 0;
+                        while n < 5
+                            img(src=grade alt="#")
+                            - n++
+                    p.product-page-reviews__date=date 
+                    p.product-page-reviews__title=title 
+                    p.product-page-reviews__text=text 
+            section.product-page-reviews
+                h3 Reviews(10)
+                +reviews("product-page-reviews__one page-1 product-page-reviews__one__active", "Darrell Steward", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__two page-1 product-page-reviews__two__active", "Amanda Spencer", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Recommended For You!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__three page-1 product-page-reviews__three__active", "Albert Flores", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Awesome Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__four page-1 product-page-reviews__four__active", "Cameron Williamson", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__five page-1 product-page-reviews__five__active", "Leslie Alexander", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "This is so Satisfying!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
 
-            +reviews("product-page-reviews__one page-2", "Darrell Steward", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__two page-2", "Leslie Alexander", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "This is so Satisfying!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__three page-2", "Cameron Williamson", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__four page-2", "Albert Flores", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Awesome Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
-            +reviews("product-page-reviews__five page-2", "Amanda Spencer", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Recommended For You!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__one page-2", "Darrell Steward", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__two page-2", "Leslie Alexander", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "This is so Satisfying!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__three page-2", "Cameron Williamson", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "I Like This Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__four page-2", "Albert Flores", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Awesome Product!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
+                +reviews("product-page-reviews__five page-2", "Amanda Spencer", "images/ant-design_star-filled.png", "Febfruary 1st, 2022", "Recommended For You!", "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod me placeat facere possimus, omnis voluptas assumenda.")
 
-        nav(class="products-nav product-page-nav")
-            ul.pagination 
-                li.page-item
-                    button(class="page-link products-page-previous" ) &lt;
-                li.page-item 
-                    button(class="page-link active-page products-page-1" ) 1
-                li.page-item 
-                    button(class="page-link products-page-2" ) 2
-                li.page-item 
-                    button(class="page-link products-page-next" ) >
-        div(class='connection product-page-connection')
-            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
-            h4.connection__title How Can We Help You?
-            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
-            p.connection__email Get In Touch support@Meridian.com
-            div.connection__phone
-                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
-            p.connection__work-time 8am to 6pm, 7 days a week
+            nav(class="products-nav product-page-nav")
+                ul.pagination 
+                    li.page-item
+                        button(class="page-link products-page-previous" ) &lt;
+                    li.page-item 
+                        button(class="page-link active-page products-page-1" ) 1
+                    li.page-item 
+                        button(class="page-link products-page-2" ) 2
+                    li.page-item 
+                        button(class="page-link products-page-next" ) >
+            section(class='connection product-page-connection')
+                img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+                h4.connection__title How Can We Help You?
+                p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+                p.connection__email Get In Touch support@Meridian.com
+                div.connection__phone
+                    div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+                p.connection__work-time 8am to 6pm, 7 days a week
         footer
-            div(class='footer product-page-footer')
+            section(class='footer product-page-footer')
                 img.footer__logo(src='images/Logo.png' alt="#")
                 hr
                 p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]

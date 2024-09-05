@@ -12,9 +12,9 @@ html(lang='en')
         link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
     body
         header
-            div.header-sale
+            section.header-sale
                 p spring season sale | 20% off entire store | Free Premium UK Delivery
-            div.nav-header 
+            section.nav-header 
                 div.nav-header__burger 
                     button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
                         span
@@ -45,12 +45,12 @@ html(lang='en')
                 p.nav-header__count 0
                 button.nav-header__search 
                     img(src="/images/Group.png" alt="#") 
-        div.shop-collection
+        section.shop-collection
             p.shop-collection__main-text MODERN, CONTEMPORARY OUTDOOR FURNITURE
             p.shop-collection__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper eget ultrices gravida gravida. Suspendisse pharetra quis eros facilisi.
             a.shop-collection__button(href="products.html") SHOP COLLESTIONS
             img.shop-collection__img(src="images/973273f390223e88c131c66774da4a7e.jpg" alt="#")
-        div.collections
+        section.collections
             div.collections__first-row-cell-first
                 div.wrap
                     a(href="#") 
@@ -76,9 +76,9 @@ html(lang='en')
                     a(href="#")
                         img(src="images/7d7d4b82a531be0f1914fd001832ab34.jpg" alt="#") 
                     p COLLECTION 5
-        div.about-us
+        section.about-us
             img(src="images/Simple_3_Column_Centered.png" alt="#")
-        div.about-us-mobile
+        section.about-us-mobile
             img(src='images/column-mobile.png' alt="#")
         mixin catalog(catalogClass, itemClass, priceClass, img, itemName, price, href)
             div(class=catalogClass)
@@ -86,7 +86,7 @@ html(lang='en')
                 p(class=itemClass)= itemName
                 p(class=priceClass)= price
                 a(href=href) View Details Products 
-        div.catalog
+        section.catalog
             h5 Ready To Ship
             p.catalog__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id pretium pellentesque leo. Lorem.
             div(class='catalog__list multiple-items')
@@ -96,13 +96,13 @@ html(lang='en')
                +catalog("catalog__list__four", "catalog__list__four__item-name", "catalog__list__four__price", "images/26b5bd8570ffe4781c8d5c9dafde9654.jpg", "Clarion Dining Chair", "£800.00", "product-page-12.html")
             div.catalog__line-mobile
                 span
-        div.about-product
+        section.about-product
             div.about-product__wrap
                 img.about-product__background(src="images/0a03de64d6ef401889db7518d1b51d8a.jpg" alt="#")
                 img.about-product__needle(src="images/needle.png" alt="#")
                 p.about-product__commited COMMITED TO EUROPIAN MANUFACTURING
                 p.about-product__quality our #[span Products] are made with #[span HIGH QUALITY] european #[span FABRIC] and sewn by a #[span SMALL] team #[span CRAFTSPEOPLE] in #[span EUROPE]
-        div(class='collections collections-other')
+        section(class='collections collections-other')
             h5 Explore each unique collection
             h4.collections-other__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id pretium pellentesque leo. Lorem.
             div(class='collections__first-row-cell-first collections-other__first-row-cell-first')
@@ -138,7 +138,7 @@ html(lang='en')
                     img.reviews__image(src=img alt="#")
                     img.reviews__previous(src='images/bi_arrow-left-short.png' alt="#")
                     img.reviews__next(src='images/bi_arrow-right-short.png' alt="#")
-        div.reviews
+        section.reviews
             +reviews('review-0', 'FURNITURE TO WRITE HOME ABOUT', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.', 'WADE WARREN', 'images/973273f390223e88c131c66774da4a7e.jpg')
             +reviews('review-1 invis', 'FURNITURE TO WRITE HOME ABOUT', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi, eget est commodo neque aliquam leo. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.', 'PIRE DUNN', 'images/0a03de64d6ef401889db7518d1b51d8a.jpg')
             +reviews('review-2 invis', 'FURNITURE TO WRITE HOME ABOUT', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim.', 'ALESAR', 'images/5805732c87d430e05a32469187b4d149.jpg')
@@ -149,7 +149,7 @@ html(lang='en')
             +reviews('review-7 invis', 'FURNITURE TO WRITE HOME ABOUT', 'Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.', 'KAME KAME', 'images/59f3d60c7d0bb54a7a52bd11eeaa18d3.jpg')
             +reviews('review-8 invis', 'FURNITURE TO WRITE HOME ABOUT', 'Lorem ipsum dolor sit amet,Id dictum quam nisi, eget est commodo neque aliquam leo. Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.', 'BLA BLA', 'images/84f1da5e728eda144a840337d5931fd5.jpg')
             +reviews('review-9 invis', 'FURNITURE TO WRITE HOME ABOUT', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dictum quam nisi Rhoncus habitant eu aliquam elit ipsum sagittis, sit proin. Donec magna sapien et blandit vehicula vestibulum. Laoreet sagittis augue quis lacinia. Ut enim eget semper odio pretium rhoncus. Blandit velit augue donec ut rhoncus semper imperdiet adipiscing dignissim. Nisl sit dui etiam morbi morbi facilisi tristique.', 'OH MY', 'images/c61d06eee41a093752fafade3a689754.jpg')
-        div.view-product
+        section.view-product
             h4 Get Inspired & Find Us on Instagram
             div.view-product__wrap
                 a.view-product__btn(href='#')
@@ -158,7 +158,7 @@ html(lang='en')
             img.view-product__image-two(src='images/e442850037f6bf4bfd7620dd715d7842.jpg' alt="#")
             img.view-product__image-three(src='images/59f3d60c7d0bb54a7a52bd11eeaa18d3.jpg' alt="#")
             img.view-product__image-four(src='images/84f1da5e728eda144a840337d5931fd5.jpg' alt="#")
-        div(class='connection homepage-connection')
+        section(class='connection homepage-connection')
             img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
             h4.connection__title How Can We Help You?
             p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
@@ -167,7 +167,7 @@ html(lang='en')
                 div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
             p.connection__work-time 8am to 6pm, 7 days a week
         footer
-            div(class='footer homepage-footer')
+            section(class='footer homepage-footer')
                 img.footer__logo(src='images/Logo.png' alt="#")
                 hr
                 p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]

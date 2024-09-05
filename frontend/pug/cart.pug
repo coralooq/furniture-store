@@ -12,9 +12,9 @@ html(lang='en')
         link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
     body
         header
-            div.header-sale
+            section.header-sale
                 p spring season sale | 20% off entire store | Free Premium UK Delivery
-            div.nav-header 
+            section.nav-header 
                 div.nav-header__burger 
                     button.nav-header__burger__icon(type="button" data-bs-toggle="dropdown" aria-expanded="false")
                         span
@@ -45,62 +45,63 @@ html(lang='en')
                 p.nav-header__count 0
                 button.nav-header__search 
                     img(src="/images/Group.png" alt="#") 
-        hr
-        p.link-line #[a(href="index.html") HOME]/#[a(href="products.html") SHOPPING CART]
-        h1.cart-title Shopping Cart
-        div.cart-products
-            div(class='cart-products__titles container text-center')
-                div(class='row align-items-start')
-                    div.col-5
-                        p.cart-products__titles__title-1 Products
-                    div.col-2
-                        p.cart-products__titles__title-2 Quantity
-                    div.col-5
-                        p.cart-products__titles__title-3 Total
-            div.cart-products__items
-        mixin cartSlider(containerClass, img, nameClass, itemName, priceClass, price, href)
-            div(class=containerClass)
-                img(src=img, alt="#")
-                p(class=nameClass) #{itemName}
-                p(class=priceClass) #{price}
-                a(href=href) View Details Products
-        div.cart-slider
-            h5 How About These?
-            div(class="cart-slider__list multiple-items")
-                +cartSlider("cart-slider__list__first", "images/products/edaf9a0f8f353c39a2b6df882c94e338.png", "cart-slider__list__first__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__first__price", "£1,600.00", "#")
-                +cartSlider("cart-slider__list__second", "images/products/33dfdc44ef9396c62b1cf0f4cdda428d.png", "cart-slider__list__second__item-name", "Plush Velvet Standard Cloud", "cart-slider__list__second__price", "£1,100.00", "#")
-                +cartSlider("cart-slider__list__three", "images/products/d48c8e004398d8fe839ff22a1ee667e9.png", "cart-slider__list__three__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__three__price", "£1,000.00", "#")
-                +cartSlider("cart-slider__list__four", "images/products/964512ce6ec92319049d155b1c3e72e6.png", "cart-slider__list__four__item-name", "Marlon Velvet SofaSet 1", "cart-slider__list__four__price", "£2,500.00", "#")
-        p.cart-quantity 0 items
-        h1.cart-order-title Order Summary
-        div.cart-checkout
-            p.cart-checkout__subtotal Subtotal
-            p.cart-checkout__price £0
-            p.cart-checkout__includes (includes £416.67 20% VAT)
-            div.cart-checkout__free-ship 
-                input(type="radio" name="shipping" value="ship1")
-                p.cart-checkout__free-ship__text Standard Free Shipping #[span £00.00]
-            div.cart-checkout__premium-ship
-                input(type="radio" name="shipping" value="ship2")
-                p.cart-checkout__premium-ship__text Premiuim Shipping #[span £118.00]
-            p.cart-checkout__total Total
-            p.cart-checkout__total-price £0
-            a.cart-checkout__checkout(href="#") Proceed To Checkout
-            img.cart-checkout__img-1(src="images/Frame177.png" alt="#")
-            img.cart-checkout__img-2(src="images/Frame178.png" alt="#")
-            img.cart-checkout__img-3(src="images/Frame180.png" alt="#")
-            img.cart-checkout__img-4(src="images/Frame181.png" alt="#")
-            p.cart-checkout__discount Discount be active after entering the checkout process
-        div(class='connection cart-connection')
-            img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
-            h4.connection__title How Can We Help You?
-            p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
-            p.connection__email Get In Touch support@Meridian.com
-            div.connection__phone
-                div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
-            p.connection__work-time 8am to 6pm, 7 days a week
+        main
+            hr
+            p.link-line #[a(href="index.html") HOME]/#[a(href="products.html") SHOPPING CART]
+            h1.cart-title Shopping Cart
+            section.cart-products
+                div(class='cart-products__titles container text-center')
+                    div(class='row align-items-start')
+                        div.col-5
+                            p.cart-products__titles__title-1 Products
+                        div.col-2
+                            p.cart-products__titles__title-2 Quantity
+                        div.col-5
+                            p.cart-products__titles__title-3 Total
+                div.cart-products__items
+            mixin cartSlider(containerClass, img, nameClass, itemName, priceClass, price, href)
+                div(class=containerClass)
+                    img(src=img, alt="#")
+                    p(class=nameClass) #{itemName}
+                    p(class=priceClass) #{price}
+                    a(href=href) View Details Products
+            section.cart-slider
+                h5 How About These?
+                div(class="cart-slider__list multiple-items")
+                    +cartSlider("cart-slider__list__first", "images/products/edaf9a0f8f353c39a2b6df882c94e338.png", "cart-slider__list__first__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__first__price", "£1,600.00", "#")
+                    +cartSlider("cart-slider__list__second", "images/products/33dfdc44ef9396c62b1cf0f4cdda428d.png", "cart-slider__list__second__item-name", "Plush Velvet Standard Cloud", "cart-slider__list__second__price", "£1,100.00", "#")
+                    +cartSlider("cart-slider__list__three", "images/products/d48c8e004398d8fe839ff22a1ee667e9.png", "cart-slider__list__three__item-name", "Serene Linen Deluxe Cloud", "cart-slider__list__three__price", "£1,000.00", "#")
+                    +cartSlider("cart-slider__list__four", "images/products/964512ce6ec92319049d155b1c3e72e6.png", "cart-slider__list__four__item-name", "Marlon Velvet SofaSet 1", "cart-slider__list__four__price", "£2,500.00", "#")
+            p.cart-quantity 0 items
+            h1.cart-order-title Order Summary
+            section.cart-checkout
+                p.cart-checkout__subtotal Subtotal
+                p.cart-checkout__price £0
+                p.cart-checkout__includes (includes £416.67 20% VAT)
+                div.cart-checkout__free-ship 
+                    input(type="radio" name="shipping" value="ship1")
+                    p.cart-checkout__free-ship__text Standard Free Shipping #[span £00.00]
+                div.cart-checkout__premium-ship
+                    input(type="radio" name="shipping" value="ship2")
+                    p.cart-checkout__premium-ship__text Premiuim Shipping #[span £118.00]
+                p.cart-checkout__total Total
+                p.cart-checkout__total-price £0
+                a.cart-checkout__checkout(href="#") Proceed To Checkout
+                img.cart-checkout__img-1(src="images/Frame177.png" alt="#")
+                img.cart-checkout__img-2(src="images/Frame178.png" alt="#")
+                img.cart-checkout__img-3(src="images/Frame180.png" alt="#")
+                img.cart-checkout__img-4(src="images/Frame181.png" alt="#")
+                p.cart-checkout__discount Discount be active after entering the checkout process
+            section(class='connection cart-connection')
+                img.connection__image(src='images/76da0bbded32c0f55e3ea9012ebece64.jpg' alt="#")
+                h4.connection__title How Can We Help You?
+                p.connection__text We pride ourselves on superior customer service. Speak to a member of our sales team to help with your order.
+                p.connection__email Get In Touch support@Meridian.com
+                div.connection__phone
+                    div.connection__phone__number #[img(src="images/bx_phone.png" alt="#")] 01789 339533
+                p.connection__work-time 8am to 6pm, 7 days a week
         footer
-            div(class='footer cart-footer')
+            section(class='footer cart-footer')
                 img.footer__logo(src='images/Logo.png' alt="#")
                 hr
                 p.footer__adress Head Office #[span 32 Plum St, Trenton, NJ 08638, United States]
