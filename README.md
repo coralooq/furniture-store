@@ -4,6 +4,7 @@
 <h2>Установка и запуск</h2>
 <pre>
 <code>git clone https://github.com/coralooq/furniture-store.git
+cd furniture-store
 npm install
 gulp
 </code></pre>
